@@ -1,0 +1,6 @@
+﻿deploy-github.ps1
+deploy-github.log
+serve.bat
+*.tmp
+.DS_Store
+Thumbs.db

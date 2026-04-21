@@ -1,0 +1,2080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EXSEA &mdash; Not the Biggest. The Most Trusted.</title>
+  <meta name="description" content="Japanese used car exporter in partnership with Japanese franchise car dealers. 1,200+ vehicles, staff with 20+ years of export experience. Osaka, Japan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',sans-serif;color:#1a1a2e;background:#fff;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    .ctn{max-width:1080px;margin:0 auto;padding:0 24px}
+
+    nav{background:#0b0b1a;padding:14px 0;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(255,255,255,.06);box-shadow:0 2px 20px rgba(0,0,0,.3)}
+    nav .inner{display:flex;justify-content:space-between;align-items:center;max-width:1080px;margin:0 auto;padding:0 24px}
+    nav .logo-wrap{display:flex;flex-direction:column;line-height:1}
+    nav .logo{font-size:22px;font-weight:900;color:#fff;letter-spacing:3px}
+    nav .tag{font-size:9px;color:#e94560;letter-spacing:2px;font-weight:700;margin-top:3px;text-transform:uppercase}
+    nav .links{display:flex;gap:22px;align-items:center}
+    nav .links a{color:#b0b0d0;font-size:13px;font-weight:600;transition:all .2s;position:relative;padding:4px 0}
+    nav .links a:hover{color:#fff}
+    nav .links a:not(.wa):not(.nav-dealer):not(.nav-stock):not(.nav-classic)::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#e94560;transition:width .25s}
+    nav .links a:not(.wa):not(.nav-dealer):not(.nav-stock):not(.nav-classic):hover::after{width:100%}
+    nav .nav-stock{background:linear-gradient(135deg,#4a9eff 0%,#2563eb 100%);color:#fff !important;padding:8px 16px;border-radius:6px;font-weight:800;font-size:12px;letter-spacing:.5px;box-shadow:0 2px 10px rgba(74,158,255,.4);transition:transform .15s,box-shadow .15s}
+    nav .nav-stock:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(74,158,255,.55);color:#fff !important}
+    nav .nav-classic{background:linear-gradient(135deg,#1a1a2e 0%,#3d1f6e 100%);color:#fff !important;padding:7px 13px 7px 11px;border-radius:6px;font-weight:800;font-size:12px;letter-spacing:.5px;display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(245,197,24,.5);box-shadow:0 2px 10px rgba(83,52,131,.45);transition:transform .15s,box-shadow .15s}
+    nav .nav-classic:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(245,197,24,.4);border-color:rgba(245,197,24,.85);color:#fff !important}
+    nav .nav-classic .jdm-ic{font-size:11px;letter-spacing:0}
+    nav .nav-dealer{background:linear-gradient(135deg,#e94560 0%,#f5c518 100%);color:#fff !important;padding:7px 13px 7px 10px;border-radius:6px;font-weight:700;font-size:12px;display:inline-flex;align-items:center;gap:6px;box-shadow:0 2px 10px rgba(233,69,96,.35);transition:transform .15s,box-shadow .15s}
+    nav .nav-dealer:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(233,69,96,.5);color:#fff !important}
+    nav .nav-dealer .star{font-size:11px}
+    nav .wa{background:#25D366;color:#fff !important;padding:8px 16px;border-radius:6px;font-weight:700;font-size:12px;box-shadow:0 2px 10px rgba(37,211,102,.3);transition:transform .15s}
+    nav .wa:hover{transform:translateY(-1px);color:#fff !important}
+
+    .hero{background:linear-gradient(135deg,#0b0b1a 0%,#16213e 100%);padding:50px 0 60px;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;top:-20%;right:-10%;width:700px;height:700px;background:radial-gradient(circle,rgba(233,69,96,.15) 0%,transparent 60%);pointer-events:none}
+    .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#e94560,#533483,#0f3460);z-index:10}
+    .hero .hero-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;position:relative;z-index:2}
+
+    /* Trust row */
+    .trust-row{display:flex;align-items:center;justify-content:center;gap:24px;padding:10px 16px;background:rgba(15,52,96,.15);border:1px solid rgba(233,69,96,.25);border-radius:100px;margin-bottom:22px;flex-wrap:wrap;backdrop-filter:blur(10px)}
+    .trust-row .stars{font-size:14px;color:#f5c518;letter-spacing:2px;text-shadow:0 0 8px rgba(245,197,24,.3)}
+    .trust-row .divider{width:1px;height:14px;background:rgba(255,255,255,.2)}
+    .trust-row .trust-t{font-size:11px;color:#b0b0d0;font-weight:600;letter-spacing:1px}
+    .trust-row .flags{font-size:16px;letter-spacing:4px;line-height:1}
+
+    .hero .overline{display:inline-block;font-size:11px;font-weight:700;color:#e94560;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;padding:4px 12px;background:rgba(233,69,96,.12);border-radius:4px;border:1px solid rgba(233,69,96,.3)}
+    .hero h1{font-size:clamp(34px,5vw,56px);font-weight:900;color:#fff;line-height:1.05;margin-bottom:20px;letter-spacing:-1px}
+    .hero h1 em{font-style:normal;background:linear-gradient(135deg,#e94560 0%,#f5c518 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:inline-block}
+    .hero .sub{font-size:16px;color:#b0b0d0;line-height:1.6;margin-bottom:28px}
+    .hero .sub strong{color:#fff}
+    .hero .sub .hl{color:#f5c518;font-weight:800;background:rgba(245,197,24,.1);padding:1px 6px;border-radius:3px}
+
+    /* USP Mini-chips row */
+    .usp-chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+    .usp-chip{font-size:11px;font-weight:700;color:#fff;padding:6px 11px;border-radius:20px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);display:inline-flex;align-items:center;gap:6px;letter-spacing:.5px}
+    .usp-chip .ic{font-size:13px}
+
+    /* Hero numbers */
+    .hero .nums{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:26px;padding:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;backdrop-filter:blur(10px)}
+    .hero .n{text-align:center}
+    .hero .n .v{font-size:26px;font-weight:900;color:#e94560;line-height:1;letter-spacing:-1px}
+    .hero .n .v.counter{background:linear-gradient(135deg,#e94560,#f5c518);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero .n .l{font-size:9.5px;color:#8a8aad;text-transform:uppercase;letter-spacing:1px;margin-top:5px;font-weight:600;line-height:1.3}
+
+    /* Hero CTAs */
+    .hero .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+    .hero .cta-primary{background:linear-gradient(135deg,#e94560 0%,#d73651 100%);color:#fff;padding:14px 26px;border-radius:8px;font-weight:800;font-size:14px;display:inline-flex;align-items:center;gap:10px;box-shadow:0 4px 20px rgba(233,69,96,.4);transition:all .2s;border:none;cursor:pointer;letter-spacing:.5px}
+    .hero .cta-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(233,69,96,.55)}
+    .hero .cta-primary .arrow{transition:transform .2s}
+    .hero .cta-primary:hover .arrow{transform:translateX(4px)}
+    .hero .cta-primary .cnt{background:rgba(255,255,255,.2);padding:3px 8px;border-radius:4px;font-size:12px;font-weight:900}
+
+    /* Hero Dealer Trade-In Mini-Banner (above fold highlight) */
+    .hero-dealer-banner{
+      display:flex;align-items:center;justify-content:space-between;
+      background:linear-gradient(135deg,rgba(245,197,24,.1) 0%,rgba(233,69,96,.1) 100%);
+      border:1px solid rgba(245,197,24,.35);
+      border-radius:10px;padding:12px 16px;margin-top:4px;
+      text-decoration:none;color:#fff;
+      transition:all .2s;position:relative;overflow:hidden;
+    }
+    .hero-dealer-banner::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(245,197,24,.2),transparent 40%);opacity:0;transition:opacity .2s;pointer-events:none}
+    .hero-dealer-banner:hover{transform:translateY(-1px);border-color:#f5c518;box-shadow:0 6px 20px rgba(245,197,24,.2)}
+    .hero-dealer-banner:hover::before{opacity:1}
+    .hero-dealer-banner .hdb-left{display:flex;align-items:center;gap:12px}
+    .hero-dealer-banner .hdb-star{font-size:28px;filter:drop-shadow(0 0 8px rgba(245,197,24,.5))}
+    .hero-dealer-banner .hdb-tag{font-size:9px;color:#f5c518;letter-spacing:2px;font-weight:800;margin-bottom:2px}
+    .hero-dealer-banner .hdb-title{font-size:15px;font-weight:800;color:#fff;line-height:1.2}
+    .hero-dealer-banner .hdb-sub{font-size:10.5px;color:#b0b0d0;margin-top:2px}
+    .hero-dealer-banner .hdb-arrow{font-size:24px;color:#f5c518;font-weight:800;transition:transform .2s}
+    .hero-dealer-banner:hover .hdb-arrow{transform:translateX(4px)}
+
+    /* Featured car card */
+    .featured-car{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.05);aspect-ratio:4/3;background:linear-gradient(135deg,#0f3460 0%,#16213e 100%);transform:perspective(1000px) rotateY(-3deg)}
+    .featured-car .featured-img{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat}
+    .featured-car .featured-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0f3460 0%,#16213e 60%,#533483 100%)}
+    .featured-car .featured-fallback svg{width:75%;height:auto;filter:drop-shadow(0 10px 30px rgba(0,0,0,.4))}
+    .featured-car .featured-overlay{position:absolute;inset:auto 0 0 0;padding:22px;background:linear-gradient(transparent 0%,rgba(0,0,0,.9) 100%);color:#fff}
+    .featured-car .featured-tag{display:inline-block;background:#e94560;color:#fff;font-size:10px;font-weight:800;letter-spacing:2px;padding:4px 10px;border-radius:4px;margin-bottom:10px;text-transform:uppercase}
+    .featured-car .featured-title{font-size:20px;font-weight:900;line-height:1.2;margin-bottom:4px}
+    .featured-car .featured-sub{font-size:12px;color:#b0b0d0;margin-bottom:10px}
+    .featured-car .featured-price{display:flex;align-items:center;justify-content:space-between}
+    .featured-car .featured-price .price{font-size:22px;font-weight:900;color:#f5c518}
+    .featured-car .featured-price small{font-size:10px;color:#8a8aad;font-weight:600;letter-spacing:1px}
+    .featured-car .featured-stacks{position:absolute;top:-12px;right:-12px;bottom:18px;width:24px;display:flex;flex-direction:column;gap:3px;pointer-events:none}
+    .featured-car .featured-stacks span{flex:1;background:rgba(15,52,96,.5);border-radius:3px;margin-left:auto;width:80%;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05)}
+    .featured-car .featured-stacks span:nth-child(2){width:60%}
+    .featured-car .featured-stacks span:nth-child(3){width:40%}
+    .featured-car .new-badge{position:absolute;top:16px;left:16px;background:rgba(37,211,102,.95);color:#fff;font-size:10px;font-weight:800;padding:5px 10px;border-radius:4px;letter-spacing:1px;animation:pulse-badge 2s ease-in-out infinite;z-index:2}
+    @keyframes pulse-badge{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}50%{box-shadow:0 0 0 8px rgba(37,211,102,0)}}
+
+    @media(max-width:900px){
+      .hero .hero-inner{grid-template-columns:1fr;gap:32px}
+      .featured-car{max-width:420px;margin:0 auto;transform:none}
+      .hero{padding:36px 0 48px}
+      .hero .nums{grid-template-columns:repeat(2,1fr)}
+      .trust-row{gap:14px;padding:8px 14px}
+      .trust-row .divider{display:none}
+    }
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;transition:all .2s;border:none}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.3)}
+    .btn-r{background:#e94560;color:#fff}
+    .btn-g{background:#25D366;color:#fff}
+    .btn-o{border:2px solid rgba(255,255,255,.2);color:#fff;background:transparent}
+    .btn-sm{padding:8px 14px;font-size:12px;border-radius:6px}
+
+    .contrast{padding:60px 0;background:#f8f9fb;text-align:center}
+    .contrast h2{font-size:24px;font-weight:800;margin-bottom:8px}
+    .contrast .tag{font-size:14px;color:#666;margin-bottom:32px}
+    .compare{display:grid;grid-template-columns:1fr auto 1fr;gap:0;max-width:700px;margin:0 auto;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+    .compare .them,.compare .us{padding:32px 28px}
+    .compare .them{background:#fff;text-align:center}
+    .compare .vs{background:#1a1a2e;color:#e94560;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;padding:0 16px;letter-spacing:1px}
+    .compare .us{background:#0f3460;color:#fff;text-align:center}
+    .compare h4{font-size:13px;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;opacity:.6}
+    .compare .big{font-size:36px;font-weight:900;margin-bottom:4px}
+    .compare .us .big{color:#e94560}
+    .compare .desc{font-size:13px;opacity:.7}
+    .clist,.ulist{list-style:none;text-align:left;margin-top:16px;font-size:13px;line-height:2}
+    .clist li::before{content:'\2714';color:#e94560;font-weight:700}
+    .ulist li::before{content:'\2714';color:#25D366;font-weight:700}
+
+    .pillars{padding:64px 0}
+    .pillars h2{text-align:center;font-size:24px;font-weight:800;margin-bottom:36px}
+    .pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+    .pcard{background:#f8f9fb;border-radius:12px;padding:32px 24px;border:1px solid #eee;transition:box-shadow .2s}
+    .pcard:hover{box-shadow:0 4px 20px rgba(0,0,0,.06)}
+    .pcard .ic{font-size:32px;margin-bottom:12px}
+    .pcard h3{font-size:16px;font-weight:700;margin-bottom:8px;color:#0f3460}
+    .pcard p{font-size:14px;color:#666;line-height:1.6}
+    .pcard .proof{margin-top:12px;padding-top:12px;border-top:1px solid #eee;font-size:12px;color:#999;font-style:italic}
+
+    /* TEAM */
+    .team{padding:72px 0;background:linear-gradient(180deg,#fff 0%,#f8f9fb 100%)}
+    .team h2{text-align:center;font-size:28px;font-weight:900;margin-bottom:6px;letter-spacing:-.5px}
+    .team h2 em{font-style:normal;color:#e94560}
+    .team .team-sub{text-align:center;font-size:14px;color:#666;max-width:580px;margin:0 auto 36px;line-height:1.6}
+    .team .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:960px;margin:0 auto}
+    .staff-card{background:#fff;border-radius:14px;padding:24px 20px;text-align:center;border:1px solid #eee;transition:all .25s;position:relative;overflow:hidden}
+    .staff-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#e94560,#f5c518);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+    .staff-card:hover{box-shadow:0 12px 30px rgba(0,0,0,.08);transform:translateY(-3px)}
+    .staff-card:hover::before{transform:scaleX(1)}
+    .staff-photo{width:110px;height:110px;border-radius:50%;margin:0 auto 14px;background:linear-gradient(135deg,#0f3460,#533483);background-size:cover;background-position:center;position:relative;border:3px solid #fff;box-shadow:0 6px 20px rgba(15,52,96,.25);display:flex;align-items:center;justify-content:center}
+    .staff-photo.loaded .staff-initials{display:none}
+    .staff-initials{color:#fff;font-size:30px;font-weight:900;letter-spacing:-1px}
+    .staff-name{font-size:18px;font-weight:800;color:#0b0b1a;margin-bottom:2px}
+    .staff-role{font-size:12px;color:#e94560;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px}
+    .staff-exp{display:inline-block;background:#f8f9fb;border:1px solid #eee;padding:3px 10px;border-radius:20px;font-size:11px;color:#555;font-weight:700;margin-bottom:10px}
+    .staff-bio{font-size:12.5px;color:#666;line-height:1.55;min-height:52px}
+    .staff-specialty{margin-top:10px;padding-top:10px;border-top:1px dashed #eee;font-size:11px;color:#0f3460;font-weight:700}
+    .staff-lang{margin-top:6px;font-size:11px;color:#888}
+
+    .team-stats{display:flex;justify-content:center;gap:32px;margin:36px auto 0;max-width:600px;padding:20px;background:#fff;border-radius:12px;border:1px solid #eee;flex-wrap:wrap;text-align:center}
+    .team-stats .ts{text-align:center}
+    .team-stats .ts-v{font-size:24px;font-weight:900;color:#e94560}
+    .team-stats .ts-l{font-size:10px;color:#888;letter-spacing:1px;text-transform:uppercase;margin-top:3px}
+
+    .qbanner{background:#0f3460;padding:40px 0;text-align:center}
+    .qbanner blockquote{font-size:18px;color:#fff;font-weight:500;font-style:italic;line-height:1.6;max-width:640px;margin:0 auto}
+    .qbanner cite{display:block;margin-top:12px;font-size:13px;color:#8a8aad;font-style:normal;font-weight:600}
+
+    .curr-bar{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+    .curr-btn{padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;border:1px solid #ddd;background:#fff;color:#666;transition:all .15s}
+    .curr-btn:hover{border-color:#0f3460;color:#0f3460}
+    .curr-btn.active{background:#0f3460;color:#fff;border-color:#0f3460}
+
+    .stock{padding:64px 0}
+    .stock h2{text-align:center;font-size:24px;font-weight:800;margin-bottom:6px}
+    .stock .sub{text-align:center;font-size:13px;color:#888;margin-bottom:20px}
+    .tab-bar{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+    .tab-btn{padding:8px 20px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;border:2px solid #eee;background:#fff;color:#888;transition:all .15s}
+    .tab-btn:hover{border-color:#e94560;color:#e94560}
+    .tab-btn.active{background:#e94560;color:#fff;border-color:#e94560}
+
+    /* Category header banner */
+    .cat-header{
+      display:none;
+      border-radius:16px;
+      overflow:hidden;
+      margin:0 0 24px;
+      position:relative;
+      box-shadow:0 8px 30px rgba(0,0,0,.1);
+    }
+    .cat-header.active{display:block}
+    .cat-header .cat-inner{
+      display:grid;grid-template-columns:1fr 280px;
+      min-height:180px;
+    }
+    .cat-header .cat-text{
+      padding:32px 28px;
+      display:flex;flex-direction:column;justify-content:center;
+      color:#fff;
+    }
+    .cat-header .cat-tag{
+      font-size:11px;letter-spacing:3px;text-transform:uppercase;
+      opacity:.7;margin-bottom:8px;font-weight:600;
+    }
+    .cat-header .cat-title{
+      font-size:28px;font-weight:900;margin-bottom:8px;line-height:1.1;
+    }
+    .cat-header .cat-desc{
+      font-size:14px;opacity:.85;line-height:1.5;max-width:460px;
+    }
+    .cat-header .cat-stats{
+      display:flex;gap:20px;margin-top:14px;flex-wrap:wrap;
+    }
+    .cat-header .cat-stat{font-size:12px;opacity:.9}
+    .cat-header .cat-stat b{font-size:18px;color:#fff;display:block;font-weight:800}
+    .cat-header .cat-visual{
+      display:flex;align-items:center;justify-content:center;
+      padding:20px;
+      position:relative;
+      overflow:hidden;
+    }
+    .cat-header .cat-visual svg{
+      width:100%;height:auto;max-width:260px;
+      filter:drop-shadow(0 4px 20px rgba(0,0,0,.3));
+    }
+    .cat-header.all  {background:linear-gradient(135deg,#0b0b1a,#16213e)}
+    .cat-header.suv  {background:linear-gradient(135deg,#0f3460,#16213e)}
+    .cat-header.compact{background:linear-gradient(135deg,#1a1a2e,#2d3561)}
+    .cat-header.truck{background:linear-gradient(135deg,#1b4332,#2d6a4f)}
+    .cat-header.classic{background:linear-gradient(135deg,#533483,#3d1f6e)}
+    @media(max-width:700px){
+      .cat-header .cat-inner{grid-template-columns:1fr;min-height:auto}
+      .cat-header .cat-visual{padding:0 20px 20px;order:2}
+      .cat-header .cat-visual svg{max-width:180px}
+    }
+
+    .sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px}
+    .scard{border:1px solid #eee;border-radius:12px;overflow:hidden;transition:box-shadow .2s;background:#fff}
+    .scard:hover{box-shadow:0 6px 24px rgba(0,0,0,.08)}
+    .scard.hidden{display:none}
+
+    .scard .thumb{position:relative;height:200px;overflow:hidden;cursor:pointer;display:flex;align-items:center;justify-content:center;background-size:cover;background-position:center;transition:transform .3s}
+    .scard:hover .thumb{transform:scale(1.02)}
+    .scard .thumb.t-suv{background:linear-gradient(135deg,#0f3460,#16213e)}
+    .scard .thumb.t-compact{background:linear-gradient(135deg,#1a1a2e,#2d3561)}
+    .scard .thumb.t-truck{background:linear-gradient(135deg,#1b4332,#2d6a4f)}
+    .scard .thumb.t-classic{background:linear-gradient(135deg,#533483,#3d1f6e)}
+    .scard .thumb.has-photo .t-icon{display:none}
+    .scard .thumb.has-photo .t-label .t-make,.scard .thumb.has-photo .t-label .t-year{text-shadow:0 1px 4px rgba(0,0,0,.9)}
+    .scard .thumb.has-photo .t-label .t-model{text-shadow:0 2px 6px rgba(0,0,0,.9)}
+    .scard .thumb .t-icon{font-size:56px;opacity:.25;position:absolute;right:20px;top:50%;transform:translateY(-50%)}
+    .scard .thumb .t-label{position:absolute;top:14px;left:16px;display:flex;flex-direction:column;gap:4px}
+    .scard .thumb .t-make{font-size:11px;font-weight:600;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:2px}
+    .scard .thumb .t-model{font-size:22px;font-weight:800;color:#fff;line-height:1.2;max-width:220px}
+    .scard .thumb .t-year{font-size:12px;font-weight:600;color:#e94560;margin-top:2px}
+    .scard .thumb .t-badges{position:absolute;bottom:12px;left:16px;display:flex;gap:6px}
+    .scard .thumb .t-badge{font-size:10px;font-weight:600;padding:3px 8px;border-radius:4px;backdrop-filter:blur(4px)}
+    .scard .thumb .t-badge.photo{background:rgba(255,255,255,.15);color:#fff}
+    .scard .thumb .t-badge.jdm{background:rgba(233,69,96,.7);color:#fff}
+    .scard .thumb:hover{filter:brightness(1.1)}
+
+    .scard .body{padding:16px 20px}
+    .scard .nm{font-size:16px;font-weight:700}
+    .scard .gr{font-size:12px;color:#888;margin-top:2px}
+    .scard .tags{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+    .scard .tg{font-size:11px;padding:3px 8px;border-radius:4px;background:#f4f4f4;color:#666}
+    .scard .tg.hl{background:#0f3460;color:#fff}
+    .scard .tg.jdm{background:#533483;color:#fff}
+
+    .scard .price-row{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;border-top:1px solid #f0f0f0;background:#fafafa}
+    .scard .pr{font-size:20px;font-weight:800;color:#e94560}
+    .scard .pr small{font-size:11px;color:#999;font-weight:400}
+
+    .scard .actions{display:flex;gap:8px;padding:0 20px 16px;background:#fafafa}
+    .scard .act{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:10px;border-radius:6px;font-size:12px;font-weight:600;transition:all .15s;text-align:center}
+    .scard .act-site{background:#0f3460;color:#fff}
+    .scard .act-site:hover{background:#1a4a80}
+    .scard .act-wa{background:#25D366;color:#fff}
+    .scard .act-wa:hover{background:#1fb855}
+
+    .nile{padding:72px 0;background:linear-gradient(135deg,#0b0b1a 0%,#16213e 50%,#533483 100%);color:#fff;position:relative;overflow:hidden}
+    .nile::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(233,69,96,.12) 0%,transparent 70%);pointer-events:none}
+    .nile .exclusive-tag{display:inline-block;background:#e94560;color:#fff;font-size:11px;font-weight:800;letter-spacing:3px;padding:6px 14px;border-radius:4px;margin-bottom:16px;text-transform:uppercase}
+    .nile h2{font-size:32px;font-weight:900;margin-bottom:14px;line-height:1.15;text-align:center}
+    .nile h2 em{font-style:normal;color:#e94560}
+    .nile .sub-intro{text-align:center;font-size:15px;color:#b0b0d0;line-height:1.6;max-width:640px;margin:0 auto 36px;padding:0 20px}
+    .nile .nile-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:920px;margin:0 auto;align-items:center;padding:0 20px}
+    .nile .nile-visual{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:28px;backdrop-filter:blur(10px)}
+    .nile .flow{display:flex;flex-direction:column;gap:14px}
+    .nile .flow-step{display:flex;align-items:center;gap:14px;padding:12px 16px;background:rgba(255,255,255,.04);border-radius:10px;border-left:3px solid #e94560}
+    .nile .flow-ic{font-size:28px;flex-shrink:0;width:48px;height:48px;background:rgba(233,69,96,.15);border-radius:10px;display:flex;align-items:center;justify-content:center}
+    .nile .flow-body{flex:1}
+    .nile .flow-t{font-size:14px;font-weight:700;color:#fff;margin-bottom:2px}
+    .nile .flow-d{font-size:12px;color:#8a8aad;line-height:1.4}
+    .nile .benefits-list{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+    .nile .benefit-item{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#fff;line-height:1.5}
+    .nile .benefit-check{color:#25D366;font-weight:900;flex-shrink:0;font-size:16px;margin-top:1px}
+    .nile .hl{color:#e94560;font-weight:700}
+    .nile .nile-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+    .nile .partner-note{margin-top:28px;text-align:center;font-size:12px;color:#6a6a8a;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);max-width:600px;margin-left:auto;margin-right:auto}
+    @media(max-width:700px){
+      .nile .nile-grid{grid-template-columns:1fr;gap:24px}
+      .nile h2{font-size:24px}
+    }
+
+    .req{padding:64px 0;background:#f8f9fb}
+    .req h2{text-align:center;font-size:24px;font-weight:800;margin-bottom:8px}
+    .req .sub{text-align:center;font-size:14px;color:#666;margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto}
+    .form-wrap{max-width:640px;margin:0 auto;background:#fff;border-radius:12px;padding:32px;border:1px solid #eee;box-shadow:0 2px 12px rgba(0,0,0,.04)}
+    .form-row{margin-bottom:16px}
+    .form-row label{display:block;font-size:13px;font-weight:600;color:#1a1a2e;margin-bottom:4px}
+    .form-row .hint{font-size:11px;color:#999;margin-bottom:4px}
+    .form-row input,.form-row select,.form-row textarea{width:100%;padding:10px 14px;border:1px solid #ddd;border-radius:6px;font-size:14px;font-family:inherit;transition:border-color .2s}
+    .form-row input:focus,.form-row select:focus,.form-row textarea:focus{outline:none;border-color:#0f3460}
+    .form-row textarea{resize:vertical;min-height:80px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .form-grid .form-row{margin-bottom:0}
+    .form-submit{text-align:center;margin-top:24px}
+
+    .reviews{padding:64px 0}
+    .reviews h2{text-align:center;font-size:24px;font-weight:800;margin-bottom:32px}
+    .rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+    .rcard{background:#f8f9fb;border-radius:10px;padding:24px;border:1px solid #eee}
+    .rcard .qt{font-size:14px;color:#444;line-height:1.6;font-style:italic;margin-bottom:12px}
+    .rcard .au{font-size:13px;font-weight:700;color:#0f3460}
+    .rcard .mt{font-size:12px;color:#888}
+    .rcard .yr{display:inline-block;background:#e94560;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;margin-top:6px}
+
+    .cta{padding:64px 0;background:#0b0b1a;text-align:center;color:#fff}
+    .cta h2{font-size:28px;font-weight:800;margin-bottom:8px}
+    .cta .sub{font-size:14px;color:#8a8aad;margin-bottom:28px}
+    .cta .qr-wrap{margin:24px auto;padding:16px;background:#fff;border-radius:16px;display:inline-block;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+    .cta .qr-wrap img{width:180px;height:180px;display:block;border-radius:8px}
+    .cta .qr-label{margin-top:12px;font-size:13px;color:#8a8aad}
+    .cta .info{margin-top:28px;font-size:13px;color:#555}
+    .cta .info a{color:#e94560}
+
+    footer{background:#060610;padding:20px 0;text-align:center;font-size:11px;color:#333}
+
+    @media(max-width:700px){
+      .compare{grid-template-columns:1fr;gap:0}
+      .compare .vs{padding:12px;font-size:12px}
+      .sgrid{grid-template-columns:1fr}
+      .form-grid{grid-template-columns:1fr}
+      nav .links a:not(.wa){display:none}
+    }
+
+    /* ============================================================
+       REFINEMENT LAYER ? editorial, premium polish (v2)
+       Applied on top of base styles. Keeps brand identity,
+       tones down noise, adds whitespace, sharpens typography.
+       ============================================================ */
+    :root{
+      --ink-900:#0b0b1a;
+      --ink-700:#1a1a2e;
+      --ink-500:#3a3a5c;
+      --ink-300:#6b6b86;
+      --ink-200:#9999b0;
+      --ink-100:#e4e4ec;
+      --paper:#fafaf7;
+      --paper-2:#f4f2ed;
+      --line:#e8e6df;
+      --accent:#c8374d;
+      --accent-soft:#d9576c;
+      --gold:#b99444;
+      --gold-soft:#d4b067;
+      --forest:#0e3a46;
+    }
+
+    /* Typography refinement */
+    body{
+      font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+      font-feature-settings:"ss01","cv11","kern";
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      color:var(--ink-700);
+      letter-spacing:-0.005em;
+    }
+    h1,h2,h3,h4{letter-spacing:-0.02em;font-feature-settings:"ss01","kern"}
+
+    /* Display serif for accent ? adds editorial feel */
+    .hero h1 em,
+    .team h2 em,
+    .nile h2 em,
+    .cta h2 span{
+      font-family:'Fraunces',Georgia,serif;
+      font-style:italic;
+      font-weight:600;
+      letter-spacing:-0.02em;
+    }
+
+    /* Subtle section eyebrow utility */
+    .eyebrow{
+      display:inline-block;
+      font-size:10.5px;
+      letter-spacing:3.5px;
+      text-transform:uppercase;
+      font-weight:700;
+      color:var(--accent);
+      margin-bottom:14px;
+    }
+    .section-divider{
+      width:48px;height:2px;background:var(--accent);
+      margin:0 auto 18px;border-radius:2px;
+    }
+
+    /* ============ NAV refinement ============ */
+    nav{
+      background:rgba(11,11,26,.82);
+      backdrop-filter:saturate(140%) blur(18px);
+      -webkit-backdrop-filter:saturate(140%) blur(18px);
+      border-bottom:1px solid rgba(255,255,255,.05);
+      box-shadow:0 1px 0 rgba(255,255,255,.03), 0 10px 30px -10px rgba(0,0,0,.35);
+      padding:12px 0;
+    }
+    nav .logo{letter-spacing:4.5px;font-weight:800;font-size:21px}
+    nav .tag{color:#d4b067;letter-spacing:3px;font-weight:600;font-size:8.5px}
+    nav .links{gap:26px}
+    nav .links a{font-size:12.5px;font-weight:500;color:#c8c8d8;letter-spacing:.3px}
+    nav .nav-stock{
+      background:#fff;color:var(--ink-900) !important;
+      box-shadow:0 1px 0 rgba(255,255,255,.4) inset, 0 2px 8px rgba(0,0,0,.25);
+      font-weight:700;letter-spacing:1.2px;font-size:11px;padding:9px 18px;
+      border-radius:999px;text-transform:uppercase;
+    }
+    nav .nav-stock:hover{
+      background:var(--gold-soft);color:var(--ink-900) !important;
+      transform:translateY(-1px);box-shadow:0 6px 18px rgba(212,176,103,.4);
+    }
+    nav .nav-dealer{
+      background:linear-gradient(135deg,var(--accent) 0%,var(--gold) 100%);
+      padding:8px 15px 8px 12px;border-radius:999px;
+      font-weight:700;font-size:11px;letter-spacing:1px;text-transform:uppercase;
+      box-shadow:0 4px 14px rgba(200,55,77,.3);
+    }
+    nav .wa{
+      background:transparent;color:#25D366 !important;
+      border:1px solid rgba(37,211,102,.4);
+      padding:8px 16px;border-radius:999px;
+      font-weight:600;font-size:11.5px;letter-spacing:.8px;
+      box-shadow:none;
+    }
+    nav .wa:hover{background:rgba(37,211,102,.1);border-color:#25D366}
+
+    /* ============ HERO refinement ============ */
+    .hero{
+      padding:72px 0 80px;
+      background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(200,55,77,.18), transparent 55%),
+        radial-gradient(900px 500px at 0% 110%, rgba(185,148,68,.12), transparent 50%),
+        linear-gradient(160deg,#08081a 0%,#121229 55%,#1a1f3a 100%);
+    }
+    .hero::before,.hero::after{display:none}
+    .hero .hero-inner{gap:64px;align-items:center}
+
+    .trust-row{
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:999px;
+      padding:8px 18px;
+      backdrop-filter:blur(10px);
+      gap:18px;margin-bottom:28px;
+    }
+    .trust-row .stars{color:var(--gold-soft);font-size:12px;letter-spacing:3px;text-shadow:none}
+    .trust-row .trust-t{font-size:10.5px;letter-spacing:1.5px;color:#a8a8be;text-transform:uppercase;font-weight:600}
+    .trust-row .divider{background:rgba(255,255,255,.12)}
+    .trust-row .flags{font-size:13px;letter-spacing:3px;opacity:.85}
+
+    .hero .overline{
+      background:transparent;border:none;padding:0;
+      color:var(--gold-soft);font-size:10.5px;letter-spacing:4px;
+      font-weight:700;margin-bottom:18px;
+    }
+    .hero h1{
+      font-size:clamp(38px,5.4vw,62px);
+      font-weight:800;line-height:1.02;
+      letter-spacing:-0.025em;margin-bottom:22px;
+    }
+    .hero h1 em{
+      background:linear-gradient(135deg,#f3d98e 0%,#e0a855 60%,#c88b3e 100%);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+      padding-right:.08em;
+    }
+    .hero .sub{
+      font-size:16.5px;line-height:1.65;color:#bcbccc;font-weight:400;
+      max-width:520px;margin-bottom:32px;
+    }
+    .hero .sub strong{color:#fff;font-weight:600}
+    .hero .sub .hl{
+      background:transparent;color:var(--gold-soft);font-weight:700;
+      padding:0;border-bottom:1px dashed rgba(212,176,103,.4);
+    }
+
+    /* Hero numbers ? quieter, editorial */
+    .hero .nums{
+      grid-template-columns:repeat(4,1fr);
+      padding:20px 8px;
+      background:rgba(255,255,255,.02);
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:14px;
+      margin-bottom:30px;
+      position:relative;
+    }
+    .hero .nums::before{
+      content:'';position:absolute;inset:0;border-radius:14px;
+      background:linear-gradient(180deg,rgba(255,255,255,.04),transparent 40%);
+      pointer-events:none;
+    }
+    .hero .n{position:relative}
+    .hero .n:not(:last-child)::after{
+      content:'';position:absolute;right:-2px;top:20%;bottom:20%;
+      width:1px;background:rgba(255,255,255,.07);
+    }
+    .hero .n .v{
+      font-size:28px;font-weight:800;letter-spacing:-0.03em;
+      color:#fff;font-feature-settings:"tnum";
+    }
+    .hero .n .v.counter{
+      background:linear-gradient(180deg,#fff 0%,#d4b067 100%);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+    }
+    .hero .n .l{
+      font-size:9px;letter-spacing:2px;color:#8888a0;
+      margin-top:8px;font-weight:600;
+    }
+
+    /* Hero CTAs ? quieter, sharper */
+    .hero .cta-primary{
+      background:#fff;color:var(--ink-900);
+      padding:14px 26px;border-radius:999px;
+      font-weight:700;font-size:13.5px;letter-spacing:1px;text-transform:uppercase;
+      box-shadow:0 2px 0 rgba(255,255,255,.2) inset, 0 14px 30px -10px rgba(0,0,0,.5);
+    }
+    .hero .cta-primary:hover{
+      background:var(--gold-soft);color:var(--ink-900);
+      transform:translateY(-2px);
+      box-shadow:0 18px 36px -10px rgba(212,176,103,.5);
+    }
+    .hero .btn-g{
+      background:transparent;color:#25D366;
+      border:1px solid rgba(37,211,102,.5);
+      padding:13px 24px;border-radius:999px;
+      font-weight:600;letter-spacing:.8px;
+    }
+    .hero .btn-g:hover{background:rgba(37,211,102,.1);border-color:#25D366;color:#25D366}
+
+    /* Hero Dealer Banner ? refined */
+    .hero-dealer-banner{
+      background:
+        linear-gradient(135deg,rgba(185,148,68,.08) 0%,rgba(200,55,77,.06) 100%),
+        rgba(255,255,255,.02);
+      border:1px solid rgba(212,176,103,.25);
+      border-radius:14px;
+      padding:16px 20px;margin-top:20px;
+    }
+    .hero-dealer-banner:hover{
+      border-color:var(--gold-soft);
+      box-shadow:0 10px 30px -10px rgba(212,176,103,.35);
+      transform:translateY(-1px);
+    }
+    .hero-dealer-banner .hdb-star{font-size:22px;filter:drop-shadow(0 0 12px rgba(212,176,103,.5))}
+    .hero-dealer-banner .hdb-tag{
+      color:var(--gold-soft);font-size:8.5px;letter-spacing:3px;
+      font-weight:700;text-transform:uppercase;
+    }
+    .hero-dealer-banner .hdb-title{
+      font-size:14.5px;font-weight:700;color:#fff;letter-spacing:-0.01em;margin-top:3px;
+    }
+    .hero-dealer-banner .hdb-sub{font-size:11px;color:#a0a0b8;font-weight:400}
+    .hero-dealer-banner .hdb-arrow{color:var(--gold-soft);font-size:20px}
+
+    /* Featured car ? cleaner, less tilt */
+    .featured-car{
+      border-radius:18px;
+      box-shadow:
+        0 1px 0 rgba(255,255,255,.08) inset,
+        0 30px 80px -20px rgba(0,0,0,.7),
+        0 0 0 1px rgba(255,255,255,.04);
+      transform:perspective(1200px) rotateY(-2deg) rotateX(1deg);
+      transition:transform .6s ease;
+    }
+    .featured-car:hover{transform:perspective(1200px) rotateY(0deg) rotateX(0deg)}
+    .featured-car .new-badge{
+      background:rgba(255,255,255,.95);color:var(--ink-900);
+      font-size:9px;letter-spacing:2.5px;font-weight:800;
+      padding:6px 12px;border-radius:999px;
+      box-shadow:0 2px 10px rgba(0,0,0,.25);
+    }
+    .featured-car .featured-overlay{
+      padding:26px 24px 22px;
+      background:linear-gradient(transparent 0%,rgba(0,0,0,.55) 55%,rgba(0,0,0,.92) 100%);
+    }
+    .featured-car .featured-tag{
+      background:rgba(255,255,255,.1);color:var(--gold-soft);
+      backdrop-filter:blur(10px);font-size:9.5px;letter-spacing:2.5px;
+      padding:5px 11px;border:1px solid rgba(212,176,103,.3);
+    }
+    .featured-car .featured-title{
+      font-family:'Fraunces',Georgia,serif;font-weight:600;
+      font-size:22px;letter-spacing:-0.015em;
+    }
+    .featured-car .featured-sub{color:#b8b8c8;font-size:12px;letter-spacing:.3px}
+    .featured-car .featured-price .price{
+      color:var(--gold-soft);font-size:24px;font-weight:700;letter-spacing:-0.02em;
+      font-feature-settings:"tnum";
+    }
+    .featured-car .featured-price small{color:#8a8aad;font-size:9.5px;letter-spacing:2px}
+
+    /* ============ CONTRAST section ============ */
+    .contrast{
+      padding:88px 0;background:var(--paper);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .contrast h2{
+      font-size:30px;font-weight:700;color:var(--ink-900);
+      letter-spacing:-0.02em;margin-bottom:10px;
+    }
+    .contrast .tag{color:var(--ink-300);font-size:13.5px;margin-bottom:40px;letter-spacing:.2px}
+    .compare{
+      border-radius:18px;overflow:hidden;
+      box-shadow:
+        0 1px 2px rgba(0,0,0,.04),
+        0 20px 40px -15px rgba(11,11,26,.12);
+      border:1px solid var(--line);
+    }
+    .compare .them{background:#fff;padding:36px 32px}
+    .compare .us{background:linear-gradient(180deg,#0d2e4d 0%,#0f3460 100%);padding:36px 32px}
+    .compare h4{
+      font-size:10.5px;letter-spacing:3px;font-weight:700;
+      text-transform:uppercase;opacity:.55;margin-bottom:18px;
+    }
+    .compare .big{
+      font-size:42px;font-weight:300;letter-spacing:-0.03em;
+      font-feature-settings:"tnum";
+    }
+    .compare .them .big{color:var(--ink-300)}
+    .compare .us .big{
+      color:transparent;
+      background:linear-gradient(135deg,#f3d98e,#d4b067);
+      -webkit-background-clip:text;background-clip:text;
+      font-weight:400;
+    }
+    .compare .desc{font-size:12px;color:var(--ink-300);letter-spacing:.5px;margin-top:2px}
+    .compare .us .desc{color:#a8a8c0}
+    .clist,.ulist{font-size:13px;line-height:1.95;margin-top:22px;color:var(--ink-500)}
+    .compare .us .clist,.compare .us .ulist{color:#cfcfdf}
+    .clist li::before,.ulist li::before{margin-right:8px}
+    .ulist li::before{color:var(--gold-soft)}
+
+    /* ============ PILLARS ============ */
+    .pillars{padding:88px 0}
+    .pillars h2{
+      font-size:30px;font-weight:700;letter-spacing:-0.02em;
+      color:var(--ink-900);margin-bottom:44px;
+    }
+    .pgrid{gap:24px}
+    .pcard{
+      background:#fff;border:1px solid var(--line);
+      border-radius:16px;padding:36px 30px;
+      transition:all .3s cubic-bezier(.2,.8,.2,1);
+      position:relative;overflow:hidden;
+    }
+    .pcard::before{
+      content:'';position:absolute;top:0;left:0;width:100%;height:2px;
+      background:linear-gradient(90deg,var(--accent),var(--gold));
+      transform:scaleX(0);transform-origin:left;
+      transition:transform .4s ease;
+    }
+    .pcard:hover{
+      border-color:transparent;
+      box-shadow:
+        0 1px 2px rgba(0,0,0,.04),
+        0 24px 48px -18px rgba(11,11,26,.18);
+      transform:translateY(-3px);
+    }
+    .pcard:hover::before{transform:scaleX(1)}
+    .pcard .ic{font-size:28px;margin-bottom:18px;opacity:.9}
+    .pcard h3{
+      font-size:18px;font-weight:700;margin-bottom:12px;
+      color:var(--ink-900);letter-spacing:-0.01em;
+    }
+    .pcard p{font-size:14px;color:var(--ink-500);line-height:1.7}
+    .pcard .proof{
+      margin-top:16px;padding-top:14px;border-top:1px solid var(--line);
+      font-size:11.5px;color:var(--ink-300);font-style:normal;
+      letter-spacing:.3px;
+    }
+
+    /* ============ TEAM ============ */
+    .team{padding:88px 0;background:linear-gradient(180deg,#fff 0%,var(--paper) 100%)}
+    .team h2{font-size:32px;font-weight:700;letter-spacing:-0.025em;margin-bottom:10px}
+    .team .team-sub{color:var(--ink-300);font-size:14px}
+    .staff-card{
+      background:#fff;border:1px solid var(--line);border-radius:18px;
+      padding:28px 22px 24px;
+      transition:all .35s cubic-bezier(.2,.8,.2,1);
+    }
+    .staff-card:hover{
+      box-shadow:0 28px 50px -20px rgba(11,11,26,.18);
+      transform:translateY(-4px);border-color:transparent;
+    }
+    .staff-card::before{
+      height:3px;background:linear-gradient(90deg,var(--accent),var(--gold));
+    }
+    .staff-photo{
+      width:104px;height:104px;
+      border:4px solid #fff;
+      box-shadow:
+        0 0 0 1px var(--line),
+        0 10px 24px -8px rgba(11,11,26,.25);
+    }
+    .staff-name{
+      font-family:'Fraunces',Georgia,serif;
+      font-weight:600;font-size:19px;letter-spacing:-0.01em;color:var(--ink-900);
+    }
+    .staff-role{
+      font-size:10.5px;letter-spacing:2.5px;font-weight:700;
+      color:var(--accent);margin-bottom:12px;
+    }
+    .staff-exp{
+      background:var(--paper);border:1px solid var(--line);
+      color:var(--ink-500);font-size:10.5px;letter-spacing:.5px;
+      padding:4px 12px;border-radius:999px;font-weight:600;
+    }
+    .staff-bio{color:var(--ink-500);font-size:12.5px;line-height:1.65}
+    .staff-specialty{color:var(--ink-700);font-size:10.5px;letter-spacing:1px;text-transform:uppercase}
+    .team-stats{
+      background:#fff;border:1px solid var(--line);border-radius:18px;
+      box-shadow:0 1px 2px rgba(0,0,0,.03),0 12px 30px -15px rgba(11,11,26,.1);
+      padding:24px 20px;gap:44px;
+    }
+    .team-stats .ts-v{
+      color:var(--accent);font-weight:700;letter-spacing:-0.02em;
+      font-feature-settings:"tnum";
+    }
+    .team-stats .ts-l{color:var(--ink-300);letter-spacing:2px}
+
+    /* ============ QUOTE BANNER ============ */
+    .qbanner{
+      background:linear-gradient(180deg,#0e3a5a 0%,#0a2640 100%);
+      padding:56px 0;position:relative;overflow:hidden;
+    }
+    .qbanner::before{
+      content:'"';position:absolute;top:-30px;left:8%;
+      font-family:'Fraunces',Georgia,serif;font-size:220px;
+      color:rgba(212,176,103,.08);line-height:1;pointer-events:none;
+    }
+    .qbanner blockquote{
+      font-family:'Fraunces',Georgia,serif;
+      font-size:21px;font-weight:500;font-style:italic;
+      color:#f5f5ee;line-height:1.55;letter-spacing:-0.01em;
+    }
+    .qbanner cite{color:var(--gold-soft);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600}
+
+    /* ============ STOCK ============ */
+    .stock{padding:88px 0}
+    .stock h2{
+      font-size:30px;font-weight:700;letter-spacing:-0.02em;
+      color:var(--ink-900);margin-bottom:8px;
+    }
+    .stock .sub{color:var(--ink-300);font-size:13px;margin-bottom:28px}
+    .tab-bar{gap:6px;margin-bottom:32px}
+    .tab-btn{
+      padding:9px 20px;border-radius:999px;
+      font-size:12px;font-weight:600;letter-spacing:.3px;
+      background:transparent;border:1px solid var(--line);color:var(--ink-300);
+      transition:all .2s;
+    }
+    .tab-btn:hover{background:var(--paper);border-color:var(--ink-300);color:var(--ink-700)}
+    .tab-btn.active{
+      background:var(--ink-900);color:#fff;border-color:var(--ink-900);
+      box-shadow:0 6px 18px -6px rgba(11,11,26,.4);
+    }
+    .curr-bar{margin-bottom:32px}
+    .curr-btn{
+      border-radius:999px;border:1px solid var(--line);
+      font-size:11.5px;font-weight:600;letter-spacing:.5px;color:var(--ink-300);
+      padding:7px 14px;
+    }
+    .curr-btn:hover{border-color:var(--ink-500);color:var(--ink-700)}
+    .curr-btn.active{background:var(--ink-900);color:#fff;border-color:var(--ink-900)}
+
+    /* Stock grid */
+    .sgrid{gap:28px;grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+    .scard{
+      border:1px solid var(--line);
+      border-radius:18px;overflow:hidden;background:#fff;
+      box-shadow:
+        0 1px 2px rgba(11,11,26,.04),
+        0 8px 24px -12px rgba(11,11,26,.08);
+      transition:all .4s cubic-bezier(.2,.8,.2,1);
+    }
+    .scard:hover{
+      border-color:transparent;
+      box-shadow:
+        0 1px 2px rgba(11,11,26,.04),
+        0 28px 56px -16px rgba(11,11,26,.22);
+      transform:translateY(-4px);
+    }
+    .scard .thumb{height:220px}
+    .scard .thumb.has-photo{
+      background-blend-mode:normal;
+    }
+    .scard:hover .thumb{transform:scale(1.04)}
+    .scard .thumb .t-label{top:16px;left:18px}
+    .scard .thumb .t-make{
+      font-size:10px;letter-spacing:2.5px;
+      color:rgba(255,255,255,.75);font-weight:700;
+    }
+    .scard .thumb.has-photo .t-label .t-make{color:rgba(255,255,255,.9)}
+    .scard .thumb .t-model{
+      font-family:'Fraunces',Georgia,serif;
+      font-size:22px;font-weight:600;letter-spacing:-0.01em;
+      margin-top:2px;
+    }
+    .scard .thumb .t-year{
+      color:var(--gold-soft);font-size:11px;font-weight:600;letter-spacing:.5px;
+      margin-top:4px;
+    }
+    .scard .thumb .t-badges{bottom:14px;left:18px;gap:6px}
+    .scard .thumb .t-badge{
+      font-size:9px;letter-spacing:1.5px;font-weight:700;
+      padding:4px 10px;border-radius:999px;text-transform:uppercase;
+      backdrop-filter:blur(10px);
+    }
+    .scard .thumb .t-badge.photo{
+      background:rgba(255,255,255,.18);
+      border:1px solid rgba(255,255,255,.2);
+    }
+    .scard .thumb .t-badge.jdm{
+      background:rgba(200,55,77,.85);
+      border:1px solid rgba(255,255,255,.15);
+    }
+
+    .scard .body{padding:20px 22px 16px}
+    .scard .nm{
+      font-family:'Fraunces',Georgia,serif;
+      font-size:17px;font-weight:600;letter-spacing:-0.005em;color:var(--ink-900);
+    }
+    .scard .gr{color:var(--ink-300);font-size:12px;margin-top:4px;letter-spacing:.2px}
+    .scard .tags{gap:6px;margin-top:12px}
+    .scard .tg{
+      font-size:10.5px;letter-spacing:.5px;font-weight:600;
+      padding:4px 10px;border-radius:999px;
+      background:var(--paper-2);color:var(--ink-500);
+    }
+    .scard .tg.hl{background:var(--ink-900);color:#fff}
+    .scard .tg.jdm{background:#3a1e62;color:#e8ccff}
+
+    .scard .price-row{
+      padding:16px 22px;background:var(--paper);
+      border-top:1px solid var(--line);
+    }
+    .scard .pr{
+      font-size:22px;font-weight:700;color:var(--ink-900);
+      letter-spacing:-0.02em;font-feature-settings:"tnum";
+    }
+    .scard .pr small{
+      color:var(--ink-300);font-size:10px;letter-spacing:2px;
+      font-weight:700;margin-left:4px;text-transform:uppercase;
+    }
+
+    .scard .actions{padding:0 22px 20px;background:var(--paper);gap:8px}
+    .scard .act{
+      padding:12px;border-radius:10px;font-size:11.5px;font-weight:700;
+      letter-spacing:1px;text-transform:uppercase;
+    }
+    .scard .act-site{
+      background:var(--ink-900);color:#fff;
+      box-shadow:0 1px 0 rgba(255,255,255,.1) inset;
+    }
+    .scard .act-site:hover{background:#1a1a3a;transform:translateY(-1px)}
+    .scard .act-wa{background:#25D366;box-shadow:0 4px 12px -4px rgba(37,211,102,.4)}
+    .scard .act-wa:hover{background:#1fb855;transform:translateY(-1px)}
+
+    /* ============ NILE refinement ============ */
+    .nile{
+      padding:96px 0;
+      background:
+        radial-gradient(900px 500px at 85% 0%, rgba(200,55,77,.2), transparent 55%),
+        radial-gradient(700px 400px at 0% 100%, rgba(185,148,68,.12), transparent 50%),
+        linear-gradient(160deg,#0a0a1e 0%,#0f1a34 45%,#1a0f2e 100%);
+    }
+    .nile::before{display:none}
+    .nile .exclusive-tag{
+      background:transparent;border:1px solid rgba(212,176,103,.5);
+      color:var(--gold-soft);font-weight:700;font-size:10px;letter-spacing:3.5px;
+      padding:7px 16px;border-radius:999px;margin-bottom:22px;
+    }
+    .nile h2{
+      font-size:clamp(28px,3.6vw,40px);font-weight:700;letter-spacing:-0.025em;
+      line-height:1.1;margin-bottom:18px;
+    }
+    .nile h2 em{color:var(--gold-soft)}
+    .nile .sub-intro{
+      font-size:15.5px;color:#a8a8be;line-height:1.7;font-weight:400;
+      max-width:660px;margin-bottom:48px;
+    }
+    .nile .nile-grid{gap:44px;align-items:start;max-width:980px}
+    .nile .nile-visual{
+      background:rgba(255,255,255,.025);
+      border:1px solid rgba(255,255,255,.07);
+      border-radius:20px;padding:30px;
+    }
+    .nile .flow{gap:12px}
+    .nile .flow-step{
+      background:rgba(255,255,255,.025);
+      border:1px solid rgba(255,255,255,.05);
+      border-left:2px solid var(--accent);
+      border-radius:12px;padding:14px 18px;gap:16px;
+      transition:all .2s;
+    }
+    .nile .flow-step:hover{
+      background:rgba(255,255,255,.05);
+      transform:translateX(3px);
+    }
+    .nile .flow-ic{
+      width:44px;height:44px;font-size:22px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:12px;
+    }
+    .nile .flow-t{
+      font-size:13.5px;font-weight:700;color:#fff;
+      letter-spacing:-0.005em;margin-bottom:3px;
+    }
+    .nile .flow-d{font-size:11.5px;color:#8a8aae;letter-spacing:.2px;line-height:1.5}
+    .nile h3{
+      font-size:10.5px;letter-spacing:3px;color:var(--gold-soft);
+      font-weight:700;text-transform:uppercase;margin-bottom:20px;
+    }
+    .nile .benefits-list{gap:14px;margin-bottom:30px}
+    .nile .benefit-item{font-size:13.5px;line-height:1.65;color:#d8d8e0;gap:12px}
+    .nile .benefit-item strong{color:#fff;font-weight:600}
+    .nile .benefit-check{
+      color:var(--gold-soft);font-size:14px;
+      margin-top:2px;font-weight:700;
+    }
+    .nile .nile-cta{gap:12px;margin-top:8px}
+    .nile .nile-cta .btn-r{
+      background:var(--gold-soft);color:var(--ink-900);
+      font-weight:700;letter-spacing:1px;text-transform:uppercase;
+      font-size:12px;padding:13px 22px;border-radius:999px;
+      box-shadow:0 8px 24px -8px rgba(212,176,103,.4);
+    }
+    .nile .nile-cta .btn-r:hover{background:#e8c583;transform:translateY(-2px)}
+    .nile .nile-cta .btn-g{
+      background:transparent;border:1px solid rgba(37,211,102,.5);
+      color:#25D366;font-weight:600;letter-spacing:.8px;
+      padding:12px 22px;border-radius:999px;font-size:12px;
+    }
+    .nile .partner-note{
+      font-size:11px;letter-spacing:.3px;color:#6a6a8a;
+      padding-top:24px;border-top:1px solid rgba(255,255,255,.06);
+      margin-top:36px;line-height:1.7;
+    }
+
+    /* ============ REQUEST FORM ============ */
+    .req{padding:88px 0;background:var(--paper)}
+    .req h2{font-size:30px;font-weight:700;letter-spacing:-0.02em;margin-bottom:10px}
+    .req .sub{color:var(--ink-300);font-size:14px;margin-bottom:40px}
+    .form-wrap{
+      border-radius:20px;padding:40px;
+      border:1px solid var(--line);
+      box-shadow:0 1px 2px rgba(0,0,0,.03),0 24px 50px -25px rgba(11,11,26,.18);
+    }
+    .form-row label{
+      font-size:11px;letter-spacing:2px;font-weight:700;
+      text-transform:uppercase;color:var(--ink-700);margin-bottom:8px;
+    }
+    .form-row input,.form-row select,.form-row textarea{
+      padding:12px 16px;border:1px solid var(--line);border-radius:10px;
+      font-size:14px;background:#fff;
+      transition:all .2s;color:var(--ink-700);
+    }
+    .form-row input:focus,.form-row select:focus,.form-row textarea:focus{
+      border-color:var(--ink-900);
+      box-shadow:0 0 0 3px rgba(11,11,26,.08);
+    }
+
+    /* ============ REVIEWS ? editorial ============ */
+    .reviews{padding:88px 0;background:#fff}
+    .reviews h2{
+      font-family:'Fraunces',Georgia,serif;font-weight:600;
+      font-size:34px;letter-spacing:-0.025em;margin-bottom:8px;color:var(--ink-900);
+    }
+    .rgrid{gap:20px;grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+    .rcard{
+      background:#fff;border:1px solid var(--line);border-radius:16px;
+      padding:28px 26px;position:relative;
+      transition:all .3s;
+    }
+    .rcard::before{
+      content:'"';position:absolute;top:-8px;left:20px;
+      font-family:'Fraunces',Georgia,serif;font-size:80px;
+      color:var(--gold-soft);opacity:.2;line-height:1;
+      pointer-events:none;
+    }
+    .rcard:hover{
+      border-color:transparent;
+      box-shadow:0 24px 48px -20px rgba(11,11,26,.15);
+      transform:translateY(-2px);
+    }
+    .rcard .qt{
+      font-size:14.5px;line-height:1.75;color:var(--ink-700);
+      font-style:normal;font-weight:400;margin-bottom:18px;
+      position:relative;z-index:1;
+    }
+    .rcard .au{
+      font-family:'Fraunces',Georgia,serif;font-weight:600;
+      font-size:14px;color:var(--ink-900);letter-spacing:-0.005em;
+    }
+    .rcard .mt{
+      font-size:11.5px;color:var(--ink-300);letter-spacing:1px;
+      margin-top:2px;text-transform:uppercase;font-weight:600;
+    }
+    .rcard .yr{
+      background:transparent;color:var(--accent);
+      font-size:10.5px;letter-spacing:1.5px;font-weight:700;
+      padding:4px 0 0;margin-top:8px;border:none;border-radius:0;
+      text-transform:uppercase;
+    }
+
+    /* ============ FINAL CTA ============ */
+    .cta{
+      padding:96px 0;
+      background:radial-gradient(900px 500px at 50% 0%, rgba(200,55,77,.22), transparent 55%),
+                 linear-gradient(180deg,#08081a,#0b0b1a);
+    }
+    .cta h2{
+      font-family:'Fraunces',Georgia,serif;font-weight:600;
+      font-size:clamp(28px,3.4vw,40px);letter-spacing:-0.025em;margin-bottom:12px;
+    }
+    .cta h2 span{color:var(--gold-soft)}
+    .cta .sub{color:#a8a8be;font-size:14.5px;margin-bottom:32px;letter-spacing:.2px}
+    .cta .qr-wrap{
+      padding:18px;border-radius:20px;
+      box-shadow:0 30px 60px -20px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.05);
+    }
+    .cta .qr-label{color:#a8a8be;font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-top:16px}
+
+    /* ============ BUTTONS general ============ */
+    .btn{
+      border-radius:999px;letter-spacing:.8px;font-weight:600;
+      transition:all .25s cubic-bezier(.2,.8,.2,1);
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px -10px rgba(0,0,0,.35)}
+
+    /* Footer/info subtle polish */
+    .cta .info{color:#6a6a8a;font-size:12.5px;letter-spacing:.3px}
+    .cta .info a{color:var(--gold-soft)}
+
+    /* ============ Section separators ============ */
+    .nile + section,
+    .stock + section,
+    .pillars + section{position:relative}
+
+    /* Smooth scroll */
+    html{scroll-behavior:smooth}
+
+    /* ============ Responsive polish ============ */
+    @media(max-width:900px){
+      .hero{padding:56px 0 64px}
+      .hero .hero-inner{gap:40px}
+      .contrast,.pillars,.team,.stock,.req,.reviews,.cta,.nile{padding:64px 0}
+      .reviews h2,.team h2,.nile h2{font-size:26px}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <div class="logo-wrap">
+      <span class="logo">EXSEA</span>
+      <span class="tag">The Most Trusted</span>
+    </div>
+    <div class="links">
+      <a href="#stock" class="nav-stock" data-tab="all">Stock</a>
+      <a href="#stock" class="nav-classic" data-tab="classic"><span class="jdm-ic">&#127470;&#127477;</span>JDM Classic</a>
+      <a href="#request">Request</a>
+      <a href="https://nilecar.jp" target="_blank" class="nav-dealer"><span class="star">&#11088;</span>Dealer Trade-In</a>
+      <a href="#reviews">Reviews</a>
+      <a href="https://wa.me/818015037757" class="wa">&#128172; WhatsApp</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="ctn">
+    <!-- Compact Trust Row -->
+    <div class="trust-row">
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span class="trust-t">Verified Reviews</span>
+      <span class="divider"></span>
+      <span class="flags">&#127472;&#127466; &#127475;&#127487; &#127467;&#127471; &#127462;&#127482; &#127468;&#127463; &#127487;&#127474; &#127462;&#127466;</span>
+      <span class="divider"></span>
+      <span class="trust-t" style="color:#f5c518">Osaka, Japan</span>
+    </div>
+
+    <div class="hero-inner">
+      <!-- Left: Copy -->
+      <div>
+        <div class="overline">&#11088; Franchise Dealer Partner</div>
+        <h1>Not the Biggest.<br><em>The Most Trusted.</em></h1>
+        <p class="sub">
+          <span class="hl">1,200</span> curated vehicles. <strong>20+ years</strong> of staff experience. Direct from <strong>Japanese franchise dealers</strong>.
+        </p>
+
+        <!-- Compact numbers -->
+        <div class="nums">
+          <div class="n"><div class="v counter" data-target="1200">1,200</div><div class="l">Stock</div></div>
+          <div class="n"><div class="v">20+</div><div class="l">Yrs Exp.</div></div>
+          <div class="n"><div class="v">Direct</div><div class="l">Dealer</div></div>
+          <div class="n"><div class="v">5</div><div class="l">Continents</div></div>
+        </div>
+
+        <!-- CTAs -->
+        <div class="cta-row">
+          <a href="#stock" class="cta-primary">View Stock <span class="arrow">&rarr;</span></a>
+          <a href="https://wa.me/818015037757?text=Hi%2C%20I%20saw%20your%20website.%20Please%20send%20your%20latest%20stock%20list." class="btn btn-g">&#128172; WhatsApp</a>
+        </div>
+
+        <!-- Dealer Trade-In mini-banner (above-fold promotion) -->
+        <a href="https://nilecar.jp" target="_blank" class="hero-dealer-banner">
+          <div class="hdb-left">
+            <div class="hdb-star">&#11088;</div>
+            <div>
+              <div class="hdb-tag">EXCLUSIVE TO EXSEA</div>
+              <div class="hdb-title">Dealer Trade-In Stock</div>
+              <div class="hdb-sub">Direct from Japanese franchise dealers &bull; Full service history</div>
+            </div>
+          </div>
+          <div class="hdb-arrow">&rarr;</div>
+        </a>
+      </div>
+
+      <!-- Right: Featured Car -->
+      <div>
+        <div class="featured-car" id="heroFeatured">
+          <div class="new-badge">&#9889; FEATURED</div>
+
+          <!-- Uses photos/stock/harrier-premium.png as hero featured -->
+          <div class="featured-img" style="background-image:url('photos/stock/harrier-premium.png')"></div>
+
+          <!-- Info overlay -->
+          <div class="featured-overlay">
+            <span class="featured-tag">&#11088; This Week's Pick</span>
+            <div class="featured-title">2019 Toyota Harrier Premium</div>
+            <div class="featured-sub">Pearl &bull; 90,468 km &bull; Grade 4.5B</div>
+            <div class="featured-price">
+              <div class="price">$16,713 <small>FOB</small></div>
+              <a href="#stock" style="font-size:10px;color:var(--ink-900);background:var(--gold-soft);padding:7px 14px;border-radius:999px;font-weight:700;letter-spacing:1.5px;text-decoration:none;text-transform:uppercase">View All &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEALER TRADE-IN (front placement) ============ -->
+<section class="nile">
+  <div class="ctn" style="position:relative;z-index:2">
+    <div style="text-align:center">
+      <span class="exclusive-tag">&#11088; Exclusive &bull; Only Through EXSEA</span>
+    </div>
+    <h2>Skip the Auction.<br><em>Buy Direct from Japanese Franchise Dealers.</em></h2>
+    <p class="sub-intro">While 99% of exporters source from the USS auction, <strong style="color:#fff">EXSEA partners directly with Japan's franchise car dealers</strong>. That means access to trade-in stock with full service history &mdash; before they ever hit the auction floor.</p>
+
+    <div class="nile-grid">
+      <!-- Left: Flow visualization -->
+      <div class="nile-visual">
+        <div class="flow">
+          <div class="flow-step">
+            <div class="flow-ic">&#127970;</div>
+            <div class="flow-body">
+              <div class="flow-t">Japanese Customer Trades In</div>
+              <div class="flow-d">Owner returns their Toyota to the franchise dealership</div>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-ic">&#128203;</div>
+            <div class="flow-body">
+              <div class="flow-t">Dealer Inspects &amp; Services</div>
+              <div class="flow-d">Full service history captured, safety check complete</div>
+            </div>
+          </div>
+          <div class="flow-step" style="border-left-color:#25D366">
+            <div class="flow-ic" style="background:rgba(37,211,102,.15)">&#129309;</div>
+            <div class="flow-body">
+              <div class="flow-t">EXSEA Gets First Pick</div>
+              <div class="flow-d">Partner dealers offer trade-ins to us <em>before</em> auction</div>
+            </div>
+          </div>
+          <div class="flow-step" style="border-left-color:#f5c518">
+            <div class="flow-ic" style="background:rgba(245,197,24,.15)">&#128674;</div>
+            <div class="flow-body">
+              <div class="flow-t">Shipped Direct to You</div>
+              <div class="flow-d">FOB Osaka, full documentation, full history</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Benefits -->
+      <div>
+        <h3>Why Dealer Trade-In Beats Auction</h3>
+        <div class="benefits-list">
+          <div class="benefit-item"><span class="benefit-check">&#10003;</span><span><strong>Full service history</strong> &mdash; every maintenance record, every stamp</span></div>
+          <div class="benefit-item"><span class="benefit-check">&#10003;</span><span><strong>Single-owner Japanese vehicles</strong> &mdash; maintained at the dealership their entire life</span></div>
+          <div class="benefit-item"><span class="benefit-check">&#10003;</span><span><strong>Pre-auction access</strong> &mdash; we see them first, buyers like you get priority</span></div>
+          <div class="benefit-item"><span class="benefit-check">&#10003;</span><span><strong>No auction fees, no bidding wars</strong> &mdash; transparent, negotiated pricing</span></div>
+          <div class="benefit-item"><span class="benefit-check">&#10003;</span><span><strong>Not available anywhere else</strong> &mdash; this supply channel is exclusive to EXSEA</span></div>
+        </div>
+        <div class="nile-cta">
+          <a href="https://nilecar.jp" target="_blank" class="btn btn-r">&#127760; Browse Dealer Trade-In Stock &rarr;</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20interested%20in%20Dealer%20Trade-In%20(Nile)%20stock%20with%20full%20service%20history." target="_blank" class="btn btn-g">&#128172; Ask on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="partner-note">
+      <strong style="color:#8a8aad">Our Franchise Dealer Network:</strong> Toyota, Honda, Nissan, Mazda, Subaru official dealerships across Western Japan. <br>With EXSEA you have the rare advantage of buying high-quality used Japanese cars <em>directly</em> from Japanese franchise car dealers.
+    </div>
+  </div>
+</section>
+
+<section class="contrast">
+  <div class="ctn">
+    <h2>Why Dealers Choose Us Over the Giants</h2>
+    <p class="tag">Same cars. Different experience.</p>
+    <div class="compare">
+      <div class="them">
+        <h4>Big Exporters</h4>
+        <div class="big" style="color:#ccc;">546,000</div>
+        <div class="desc">cars in stock</div>
+        <ul class="clist">
+          <li>Auction-only supply chain</li>
+          <li>Different operator every time</li>
+          <li>Quantity over quality</li>
+          <li>Automated, impersonal</li>
+        </ul>
+      </div>
+      <div class="vs">VS</div>
+      <div class="us">
+        <h4>EXSEA</h4>
+        <div class="big">1,200</div>
+        <div class="desc">curated vehicles</div>
+        <ul class="ulist">
+          <li>Direct from Japanese franchise dealers</li>
+          <li>Auction + Dealer Trade-In network</li>
+          <li>Every car personally inspected</li>
+          <li>Staff with 20+ yrs export experience</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pillars">
+  <div class="ctn">
+    <h2>What Makes EXSEA Different</h2>
+    <div class="pgrid">
+      <div class="pcard">
+        <div class="ic">&#127970;</div>
+        <h3>Franchise Dealer Partnership</h3>
+        <p>Auction is standard. What sets us apart &mdash;<strong style="color:#0f3460">we partner directly with Japanese franchise car dealers</strong>. Buy high-quality used Japanese cars straight from the source, not just the auction floor.</p>
+        <div class="proof">Direct dealer access &mdash; rare outside the Japanese domestic network</div>
+      </div>
+      <div class="pcard">
+        <div class="ic">&#127891;</div>
+        <h3>Young Company, Seasoned Team</h3>
+        <p>EXSEA was founded <strong style="color:#0f3460">8 years ago</strong> &mdash; but our staff bring <strong style="color:#0f3460">20+ years</strong> of Japan export expertise. Fresh energy, deep experience, personal service on every order.</p>
+        <div class="proof">Every order handled by a seasoned export veteran</div>
+      </div>
+      <div class="pcard">
+        <div class="ic">&#11088;</div>
+        <h3>Exclusive Dealer Trade-In</h3>
+        <p>Toyota Dealer Trade-In vehicles with <strong style="color:#0f3460">full service history</strong>. Not auction. Not available from any other exporter.</p>
+        <div class="proof">Browse at nilecar.jp &mdash; only through EXSEA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="ctn">
+    <h2>Meet the <em>EXSEA Team</em></h2>
+    <p class="team-sub">The people behind every order. Fresh company, seasoned team &mdash; over <strong>50 combined years</strong> of Japan export expertise at your service.</p>
+
+    <div class="team-grid">
+      <!-- Tom -->
+      <div class="staff-card" data-photo="photos/staff/tom.jpg">
+        <div class="staff-photo"><span class="staff-initials">TT</span></div>
+        <div class="staff-name">Tom Tanaka</div>
+        <div class="staff-role">Managing Director</div>
+        <div class="staff-exp">CEO &bull; 8+ years</div>
+        <div class="staff-bio">Leading EXSEA's growth into African and Middle Eastern markets. Your direct line for partnership inquiries.</div>
+        <div class="staff-specialty">New market development &bull; Dealer partnerships</div>
+        <div class="staff-lang">&mdash;&mdash; &mdash;&mdash; Japanese / English</div>
+      </div>
+
+      <!-- Marcus -->
+      <div class="staff-card" data-photo="photos/staff/marcus.jpg">
+        <div class="staff-photo"><span class="staff-initials">M</span></div>
+        <div class="staff-name">Marcus</div>
+        <div class="staff-role">Senior Export Specialist</div>
+        <div class="staff-exp">25+ years in industry</div>
+        <div class="staff-bio">Oceania &amp; Pacific specialist. Trusted by dealers in New Zealand, Fiji, and Australia for 25 years.</div>
+        <div class="staff-specialty">Pacific markets &bull; JDM classics</div>
+        <div class="staff-lang">&mdash;&mdash; English</div>
+      </div>
+
+      <!-- Hakim -->
+      <div class="staff-card" data-photo="photos/staff/hakim.jpg">
+        <div class="staff-photo"><span class="staff-initials">H</span></div>
+        <div class="staff-name">Hakim</div>
+        <div class="staff-role">Africa Desk Lead</div>
+        <div class="staff-exp">15+ years exporting</div>
+        <div class="staff-bio">East Africa region expert. Kenya, Uganda, Tanzania, Zambia specialist. Deep understanding of port logistics.</div>
+        <div class="staff-specialty">Africa markets &bull; Commercial vehicles</div>
+        <div class="staff-lang">&mdash;&mdash; &mdash;&mdash; English / Swahili / Arabic</div>
+      </div>
+
+      <!-- Masao -->
+      <div class="staff-card" data-photo="photos/staff/masao.jpg">
+        <div class="staff-photo"><span class="staff-initials">M</span></div>
+        <div class="staff-name">Masao</div>
+        <div class="staff-role">Export Operations</div>
+        <div class="staff-exp">10+ years operations</div>
+        <div class="staff-bio">Documentation, shipping, and customer updates. Praised by clients for keeping every stage transparent.</div>
+        <div class="staff-specialty">Documentation &bull; Shipping coordination</div>
+        <div class="staff-lang">&mdash;&mdash; &mdash;&mdash; Japanese / English</div>
+      </div>
+    </div>
+
+    <div class="team-stats">
+      <div class="ts"><div class="ts-v">50+</div><div class="ts-l">Combined Years</div></div>
+      <div class="ts"><div class="ts-v">4</div><div class="ts-l">Continents Covered</div></div>
+      <div class="ts"><div class="ts-v">6</div><div class="ts-l">Languages Spoken</div></div>
+      <div class="ts"><div class="ts-v">1-1</div><div class="ts-l">Your Dedicated Contact</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="qbanner">
+  <div class="ctn">
+    <blockquote>"Very professional. They always checked the conditions of the cars before purchase and arranged shipments in good time. A reliable partner from order to delivery."</blockquote>
+    <cite>Benard Ogwenoh &mdash; Nairobi, Kenya</cite>
+  </div>
+</section>
+
+<!-- ============ STOCK ============ -->
+<section class="stock" id="stock">
+  <div class="ctn">
+    <h2>Current Stock &mdash; Ready to Ship</h2>
+    <p class="sub">All prices FOB Japan &bull; C&F to your port on request &bull; T/T payment</p>
+
+    <div class="curr-bar">
+      <button class="curr-btn active" onclick="setCurrency('USD')">USD $</button>
+      <button class="curr-btn" onclick="setCurrency('NZD')">NZD $</button>
+      <button class="curr-btn" onclick="setCurrency('AUD')">AUD $</button>
+      <button class="curr-btn" onclick="setCurrency('GBP')">GBP ?</button>
+      <button class="curr-btn" onclick="setCurrency('EUR')">EUR ?</button>
+      <button class="curr-btn" onclick="setCurrency('KES')">KES</button>
+      <button class="curr-btn" onclick="setCurrency('MYR')">MYR RM</button>
+      <button class="curr-btn" onclick="setCurrency('JPY')">JPY ?</button>
+    </div>
+
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="setTab('all')">All Stock</button>
+      <button class="tab-btn" onclick="setTab('suv')">SUV / Commercial</button>
+      <button class="tab-btn" onclick="setTab('compact')">Compact / Wagon</button>
+      <button class="tab-btn" onclick="setTab('truck')">Trucks / Vans</button>
+      <button class="tab-btn" onclick="setTab('classic')">Classic / JDM</button>
+    </div>
+
+    <!-- ============ Category Headers ============ -->
+    <div class="cat-header all active" data-cat="all">
+      <div class="cat-inner">
+        <div class="cat-text">
+          <div class="cat-tag">ALL STOCK &bull; ALL SEGMENTS</div>
+          <div class="cat-title">Curated Japanese Vehicles</div>
+          <div class="cat-desc">SUVs, compacts, commercials, and JDM classics &mdash; every unit hand-selected, personally inspected, ready to ship FOB from Osaka.</div>
+          <div class="cat-stats">
+            <div class="cat-stat"><b>1,200</b>Total Stock</div>
+            <div class="cat-stat"><b>23</b>Featured Below</div>
+            <div class="cat-stat"><b>Direct</b>Franchise Dealer</div>
+          </div>
+        </div>
+        <div class="cat-visual">
+          <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="gAll" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e94560"/><stop offset="100%" stop-color="#533483"/></linearGradient></defs>
+            <!-- SUV silhouette (front 3/4) -->
+            <path d="M30 80 L30 60 Q30 40 50 35 L90 30 Q120 30 145 35 L165 45 Q175 50 175 60 L175 85 L160 85 L160 82 Q160 72 150 72 Q140 72 140 82 L140 85 L65 85 L65 82 Q65 72 55 72 Q45 72 45 82 L45 85 L30 85 Z" fill="url(#gAll)"/>
+            <!-- Windshield -->
+            <path d="M55 55 L75 40 L130 40 L155 55 L145 58 L70 58 Z" fill="#0b0b1a" opacity="0.7"/>
+            <!-- Headlights -->
+            <circle cx="45" cy="62" r="4" fill="#fff" opacity="0.9"/>
+            <circle cx="168" cy="62" r="4" fill="#fff" opacity="0.9"/>
+            <!-- Grille -->
+            <rect x="90" y="60" width="25" height="8" rx="2" fill="#0b0b1a" opacity="0.5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-header suv" data-cat="suv">
+      <div class="cat-inner">
+        <div class="cat-text">
+          <div class="cat-tag">SUV &bull; CROSSOVER &bull; COMMERCIAL</div>
+          <div class="cat-title">Harrier &bull; RAV4 &bull; Forester &bull; Hiace</div>
+          <div class="cat-desc">Premium SUVs and commercial workhorses. Hybrid and 4WD available. Ideal for family fleets, taxi operators, and off-road markets.</div>
+          <div class="cat-stats">
+            <div class="cat-stat"><b>5</b>Featured Units</div>
+            <div class="cat-stat"><b>2019</b>Typical Year</div>
+            <div class="cat-stat"><b>Hybrid</b>4WD Options</div>
+          </div>
+        </div>
+        <div class="cat-visual">
+          <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="gSuv" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e94560"/><stop offset="100%" stop-color="#0f3460"/></linearGradient></defs>
+            <!-- Taller SUV with box-like back -->
+            <path d="M25 85 L25 55 Q25 38 45 33 L85 28 Q125 28 155 33 L170 40 Q180 45 180 55 L180 90 L165 90 L165 87 Q165 75 153 75 Q141 75 141 87 L141 90 L65 90 L65 87 Q65 75 53 75 Q41 75 41 87 L41 90 L25 90 Z" fill="url(#gSuv)"/>
+            <!-- Large windshield -->
+            <path d="M52 55 L72 38 L140 38 L160 55 L150 58 L65 58 Z" fill="#0b0b1a" opacity="0.7"/>
+            <!-- Side window -->
+            <path d="M150 58 L155 40 L168 40 L168 58 Z" fill="#0b0b1a" opacity="0.5"/>
+            <circle cx="40" cy="62" r="5" fill="#fff" opacity="0.95"/>
+            <circle cx="172" cy="62" r="5" fill="#fff" opacity="0.95"/>
+            <rect x="85" y="62" width="30" height="10" rx="2" fill="#0b0b1a" opacity="0.5"/>
+            <!-- Roof rails -->
+            <rect x="55" y="30" width="100" height="2" fill="#e94560" opacity="0.5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-header compact" data-cat="compact">
+      <div class="cat-inner">
+        <div class="cat-text">
+          <div class="cat-tag">COMPACT &bull; SEDAN &bull; WAGON</div>
+          <div class="cat-title">Aqua &bull; Fit &bull; Swift &bull; C-HR</div>
+          <div class="cat-desc">Fuel-efficient hybrids and compact city cars. Perfect for resale markets that demand low running costs and long-term reliability.</div>
+          <div class="cat-stats">
+            <div class="cat-stat"><b>12</b>Featured Units</div>
+            <div class="cat-stat"><b>Hybrid</b>Most Popular</div>
+            <div class="cat-stat"><b>Low KM</b>Available</div>
+          </div>
+        </div>
+        <div class="cat-visual">
+          <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="gCom" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4a5db0"/><stop offset="100%" stop-color="#1a1a2e"/></linearGradient></defs>
+            <!-- Low compact shape -->
+            <path d="M25 85 L28 65 Q35 52 55 48 L85 42 Q115 42 140 48 L165 55 Q175 60 178 68 L180 85 L165 85 L165 82 Q165 72 155 72 Q145 72 145 82 L145 85 L60 85 L60 82 Q60 72 50 72 Q40 72 40 82 L40 85 Z" fill="url(#gCom)"/>
+            <!-- Low windshield and curved top -->
+            <path d="M48 62 L70 48 L130 48 L155 62 L145 64 L60 64 Z" fill="#0b0b1a" opacity="0.75"/>
+            <circle cx="38" cy="72" r="4" fill="#fff" opacity="0.9"/>
+            <circle cx="170" cy="72" r="4" fill="#fff" opacity="0.9"/>
+            <rect x="90" y="72" width="22" height="6" rx="2" fill="#0b0b1a" opacity="0.6"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-header truck" data-cat="truck">
+      <div class="cat-inner">
+        <div class="cat-text">
+          <div class="cat-tag">TRUCK &bull; VAN &bull; COMMERCIAL</div>
+          <div class="cat-title">Hiace &bull; Canter &bull; Hilux</div>
+          <div class="cat-desc">Workhorses trusted across Africa, the Pacific, and Southeast Asia. Diesel and petrol. Flatbed, dropside, cargo, passenger configurations.</div>
+          <div class="cat-stats">
+            <div class="cat-stat"><b>1</b>Featured Here</div>
+            <div class="cat-stat"><b>1,200</b>Full Stock</div>
+            <div class="cat-stat"><b>Diesel</b>&amp; Petrol</div>
+          </div>
+        </div>
+        <div class="cat-visual">
+          <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="gTruck" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2d6a4f"/><stop offset="100%" stop-color="#1b4332"/></linearGradient></defs>
+            <!-- Van shape (Hiace) - tall box -->
+            <path d="M20 85 L20 50 Q20 35 35 32 L170 30 Q180 30 180 45 L180 90 L165 90 L165 87 Q165 75 153 75 Q141 75 141 87 L141 90 L60 90 L60 87 Q60 75 48 75 Q36 75 36 87 L36 90 L20 90 Z" fill="url(#gTruck)"/>
+            <!-- Large rectangular side windows -->
+            <rect x="48" y="40" width="30" height="25" rx="2" fill="#0b0b1a" opacity="0.6"/>
+            <rect x="82" y="40" width="30" height="25" rx="2" fill="#0b0b1a" opacity="0.6"/>
+            <rect x="116" y="40" width="30" height="25" rx="2" fill="#0b0b1a" opacity="0.6"/>
+            <!-- Windshield -->
+            <path d="M35 55 L40 40 L50 40 L50 60 Z" fill="#0b0b1a" opacity="0.75"/>
+            <circle cx="32" cy="68" r="4" fill="#fff" opacity="0.95"/>
+            <circle cx="172" cy="68" r="4" fill="#fff" opacity="0.95"/>
+            <rect x="155" y="65" width="20" height="8" rx="1" fill="#0b0b1a" opacity="0.4"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-header classic" data-cat="classic">
+      <div class="cat-inner">
+        <div class="cat-text">
+          <div class="cat-tag">JDM CLASSIC &bull; 25-YEAR RULE</div>
+          <div class="cat-title">Skyline &bull; Supra &bull; RX-7 &bull; Caldina GT-T</div>
+          <div class="cat-desc">Legendary Japanese sports cars &mdash; all eligible under the 25-Year Import Rule (US, Canada, UK). One featured in stock now; more sourced to order via Japanese auctions and our franchise dealer network.</div>
+          <div class="cat-stats">
+            <div class="cat-stat"><b>1</b>Featured Now</div>
+            <div class="cat-stat"><b>25yr &#10003;</b>Import Eligible</div>
+            <div class="cat-stat"><b>Sourced</b>To Order</div>
+          </div>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20looking%20for%20a%20*JDM%20Classic*.%20Model%2Fyear%20of%20interest%3A%20____.%20Budget%3A%20____.%20Please%20advise%20what%27s%20available%20or%20sourceable." target="_blank" class="btn btn-r" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#25D366 0%,#128C7E 100%);padding:11px 18px;font-size:13px;letter-spacing:.5px">&#128172; Request a JDM Classic &rarr;</a>
+        </div>
+        <div class="cat-visual">
+          <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="gCls" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e94560"/><stop offset="100%" stop-color="#3d1f6e"/></linearGradient></defs>
+            <!-- Low sports car shape -->
+            <path d="M15 82 L20 62 Q28 48 48 44 L75 35 Q110 33 142 42 L170 55 Q180 62 182 72 L182 85 L168 85 L168 82 Q168 72 158 72 Q148 72 148 82 L148 85 L55 85 L55 82 Q55 72 45 72 Q35 72 35 82 L35 85 Z" fill="url(#gCls)"/>
+            <!-- Sleek low windshield -->
+            <path d="M45 58 L70 42 L125 40 L155 55 L148 60 L55 60 Z" fill="#0b0b1a" opacity="0.8"/>
+            <!-- Side pop-up headlights / slim lights -->
+            <rect x="22" y="66" width="12" height="3" rx="1" fill="#fff" opacity="0.95"/>
+            <rect x="166" y="66" width="12" height="3" rx="1" fill="#fff" opacity="0.95"/>
+            <!-- Racing stripe -->
+            <rect x="70" y="42" width="55" height="2" fill="#e94560" opacity="0.7"/>
+            <!-- Spoiler hint -->
+            <rect x="140" y="42" width="15" height="3" rx="1" fill="#e94560" opacity="0.6"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="sgrid" id="stockGrid">
+
+      <!-- 1. Hiace -->
+      <div class="scard" data-cat="suv,truck" data-usd="11975" data-photo="photos/stock/hiace-long-dx.png">
+        <a href="https://exsea.jp/auto_listing/toyota-hiace-trh200-5041339/" target="_blank" class="thumb t-truck">
+          <span class="t-icon">&#128667;</span>
+          <div class="t-label"><span class="t-make">Toyota</span><span class="t-model">Hiace Long DX</span><span class="t-year">2019 &bull; 114,839 km</span></div>
+          <div class="t-badges"><span class="t-badge photo">&#128247; View Photos</span></div>
+        </a>
+        <div class="body"><div class="nm">2019 Toyota Hiace Long DX</div><div class="gr">Silver &bull; AT &bull; 2WD &bull; 2000cc</div><div class="tags"><span class="tg">114,839 km</span><span class="tg hl">Commercial</span></div></div>
+        <div class="price-row"><div class="pr" data-price="11975">$11,975 <small>FOB</small></div></div>
+        <div class="actions">
+          <a href="https://exsea.jp/auto_listing/toyota-hiace-trh200-5041339/" target="_blank" class="act act-site">&#128247; Details & Photos</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20interested%20in%20the%20*2019%20Toyota%20Hiace%20Long%20DX*%20(Stock%3A%20TRH200-5041339)%20FOB%20%2411%2C975.%20Please%20send%20details." target="_blank" class="act act-wa">&#128172; WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 2. Harrier Premium -->
+      <div class="scard" data-cat="suv" data-usd="16713" data-photo="photos/stock/harrier-premium.png">
+        <a href="https://exsea.jp/auto_listing/toyota-harrier-zsu60-0182096/" target="_blank" class="thumb t-suv">
+          <span class="t-icon">&#128663;</span>
+          <div class="t-label"><span class="t-make">Toyota</span><span class="t-model">Harrier Premium</span><span class="t-year">2019 &bull; 90,468 km</span></div>
+          <div class="t-badges"><span class="t-badge photo">&#128247; View Photos</span></div>
+        </a>
+        <div class="body"><div class="nm">2019 Toyota Harrier Premium</div><div class="gr">Pearl &bull; AT &bull; Grade 4.5B &bull; 2000cc</div><div class="tags"><span class="tg">90,468 km</span><span class="tg hl">Premium Noir</span></div></div>
+        <div class="price-row"><div class="pr" data-price="16713">$16,713 <small>FOB</small></div></div>
+        <div class="actions">
+          <a href="https://exsea.jp/auto_listing/toyota-harrier-zsu60-0182096/" target="_blank" class="act act-site">&#128247; Details & Photos</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20interested%20in%20the%20*2019%20Toyota%20Harrier%20Premium*%20(Stock%3A%20ZSU60-0182096)%20FOB%20%2416%2C713.%20Please%20send%20details." target="_blank" class="act act-wa">&#128172; WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 3. Harrier Elegance -->
+      <div class="scard" data-cat="suv" data-usd="15236" data-photo="photos/stock/harrier-elegance.png">
+        <a href="https://exsea.jp/auto_listing/toyota-harrier-zsu60-0172664/" target="_blank" class="thumb t-suv">
+          <span class="t-icon">&#128663;</span>
+          <div class="t-label"><span class="t-make">Toyota</span><span class="t-model">Harrier Elegance</span><span class="t-year">2019 &bull; 91,354 km</span></div>
+          <div class="t-badges"><span class="t-badge photo">&#128247; View Photos</span></div>
+        </a>
+        <div class="body"><div class="nm">2019 Toyota Harrier Elegance</div><div class="gr">SUV &bull; AT &bull; 2000cc</div><div class="tags"><span class="tg">91,354 km</span></div></div>
+        <div class="price-row"><div class="pr" data-price="15236">$15,236 <small>FOB</small></div></div>
+        <div class="actions">
+          <a href="https://exsea.jp/auto_listing/toyota-harrier-zsu60-0172664/" target="_blank" class="act act-site">&#128247; Details & Photos</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20interested%20in%20the%20*2019%20Toyota%20Harrier%20Elegance*%20(Stock%3A%20ZSU60-0172664)%20FOB%20%2415%2C236.%20Please%20send%20details." target="_blank" class="act act-wa">&#128172; WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 4. RAV4 Hybrid -->
+      <div class="scard" data-cat="suv" data-usd="15350" data-photo="photos/stock/rav4-hybrid.png">
+        <a href="https://exsea.jp/auto_listing/toyota-rav4-axah54-2005514/" target="_blank" class="thumb t-suv">
+          <span class="t-icon">&#128663;</span>
+          <div class="t-label"><span class="t-make">Toyota</span><span class="t-model">RAV4 Hybrid G</span><span class="t-year">2019 &bull; 135,590 km</span></div>
+          <div class="t-badges"><span class="t-badge photo">&#128247; View Photos</span></div>
+        </a>
+        <div class="body"><div class="nm">2019 Toyota RAV4 Hybrid G</div><div class="gr">Red &bull; AT &bull; 2500cc &bull; Fully Loaded</div><div class="tags"><span class="tg">135,590 km</span><span class="tg hl">4WD</span><span class="tg">Hybrid</span></div></div>
+        <div class="price-row"><div class="pr" data-price="15350">$15,350 <small>FOB</small></div></div>
+        <div class="actions">
+          <a href="https://exsea.jp/auto_listing/toyota-rav4-axah54-2005514/" target="_blank" class="act act-site">&#128247; Details & Photos</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20interested%20in%20the%20*2019%20Toyota%20RAV4%20Hybrid%20G%204WD*%20(Stock%3A%20AXAH54-2005514)%20FOB%20%2415%2C350.%20Please%20send%20details." target="_blank" class="act act-wa">&#128172; WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 5. Forester -->
+      <div class="scard" data-cat="suv" data-usd="11229" data-photo="photos/stock/forester-advance.png">
+        <a href="https://exsea.jp/auto_listing/subaru-forester-ske-031868/" target="_blank" class="thumb t-suv">
+          <span class="t-icon">&#128663;</span>
+          <div class="t-label"><span class="t-make">Subaru</span><span class="t-model">Forester Advance</span><span class="t-year">2019 &bull; 112,415 km</span></div>
+          <div class="t-badges"><span class="t-badge photo">&#128247; View Photos</span></div>
+        </a>
+        <div class="body"><div class="nm">2019 Subaru Forester Advance</div><div class="gr">Hybrid SUV &bull; AT &bull; 2000cc</div><div class="tags"><span class="tg">112,415 km</span><span class="tg hl">4WD</span><span class="tg">Hybrid</span></div></div>
+        <div class="price-row"><div class="pr" data-price="11229">$11,229 <small>FOB</small></div></div>
+        <div class="actions">
+          <a href="https://exsea.jp/auto_listing/subaru-forester-ske-031868/" target="_blank" class="act act-site">&#128247; Details & Photos</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20interested%20in%20the%20*2019%20Subaru%20Forester%20Advance*%20(Stock%3A%20SKE-031868)%20FOB%20%2411%2C229.%20Please%20send%20details." target="_blank" class="act act-wa">&#128172; WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 6. C-HR G Hybrid -->
+      <div class="scard" data-cat="compact" data-usd="9363" data-photo="photos/stock/chr-g-hybrid.png">
+        <a href="https://exsea.jp/auto_listing/toyota-c-hr-zyx10-2013393/" target="_blank" class="thumb t-compact">
+          <span class="t-icon">&#128663;</span>
+          <div class="t-label"><span class="t-make">Toyota</span><span class="t-model">C-HR G Hybrid</span><span class="t-year">2017 &bull; 86,220 km</span></div>
+          <div class="t-badges"><span class="t-badge photo">&#128247; View Photos</span></div>
+        </a>
+        <div class="body"><div class="nm">2017 Toyota C-HR G Hybrid</div><div class="gr">Compact SUV &bull; 1800cc</div><div class="tags"><span class="tg">86,220 km</span><span class="tg">Hybrid</span></div></div>
+        <div class="price-row"><div class="pr" data-price="9363">$9,363 <small>FOB</small></div></div>
+        <div class="actions">
+          <a href="https://exsea.jp/auto_listing/toyota-c-hr-zyx10-2013393/" target="_blank" class="act act-site">&#128247; Details & Photos</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20interested%20in%20the%20*2017%20Toyota%20C-HR%20G%20Hybrid*%20(Stock%3A%20ZYX10-2013393)%20FOB%20%249%2C363.%20Please%20send%20details." target="_blank" class="act act-wa">&#128172; WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 7. C-HR S Hybrid -->
+      <div class="scard" data-cat="compact" data-usd="8408" data-photo="photos/stock/chr-s-hybrid.png">
+        <a href="https://exsea.jp/auto_listing/toyota-ch-r-zyx10-2012736/" target="_blank" class="thumb t-compact">
+          <span class="t-icon">&#128663;</span>
+          <div class="t-label"><span class="t-make">Toyota</span><span class="t-model">C-HR S Hybrid</span><span class="t-year">2017 &bull; 87,623 km</span></div>
+          <div class="t-badges"><span class="t-badge photo">&#128247; View Photos</span></div>
+        </a>
+        <div class="body"><div class="nm">2017 Toyota C-HR S Hybrid</div><div class="gr">Compact SUV &bull; 1800cc</div><div class="tags"><span class="tg">87,623 km</span><span class="tg">Hybrid</span></div></div>
+        <div class="price-row"><div class="pr" data-price="8408">$8,408 <small>FOB</small></div></div>
+        <div class="actions">
+          <a href="https://exsea.jp/auto_listing/toyota-ch-r-zyx10-2012736/" target="_blank" class="act act-site">&#128247; Details & Photos</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20interested%20in%20the%20*2017%20Toyota%20C-HR%20S%20Hybrid*%20(Stock%3A%20ZYX10-2012736)%20FOB%20%248%2C408.%20Please%20send%20details." target="_blank" class="act act-wa">&#128172; WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 8. Corolla Fielder Hybrid (74k) -->
+      <div class="scard" data-cat="compact" data-usd="7815" data-photo="photos/stock/fielder-74k.png">
+        <a href="https://exsea.jp/auto_listing/toyota-corolla-fielder-nke165-7205887/" target="_blank" class="thumb t-compact">
+          <span class="t-icon">&#128663;</span>
+          <div class="t-label"><span class="t-make">Toyota</span><span class="t-model">Corolla Fielder Hybrid</span><span class="t-year">2019 &bull; 74,880 km</span></div>
+          <div class="t-badges"><span class="t-badge photo">&#128247; View Photos</span></div>
+        </a>
+        <div class="body"><div class="nm">2019 Corolla Fielder Hybrid</div><div class="gr">Wagon &bull; 1500cc</div><div class="tags"><span class="tg">74,880 km</span><span class="tg">Hybrid</span></div></div>
+        <div class="price-row"><div class="pr" data-price="7815">$7,815 <small>FOB</small></div></div>
+        <div class="actions">
+          <a href="https://exsea.jp/auto_listing/toyota-corolla-fielder-nke165-7205887/" target="_blank" class="act act-site">&#128247; Details & Photos</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20interested%20in%20the%20*2019%20Corolla%20Fielder%20Hybrid*%20(74%2C880km%20%E2%80%93%20Stock%3A%20NKE165-7205887)%20FOB%20%247%2C815.%20Please%20send%20details." target="_blank" class="act act-wa">&#128172; WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 9. Corolla Fielder Hybrid (130k) -->
+      <div class="scard" data-cat="compact" data-usd="7707" data-photo="photos/stock/fielder-130k.png">
+        <a href="https://exsea.jp/auto_listing/toyota-corolla-fielder-nke165-7209414/" target="_blank" class="thumb t-compact">
+          <span class="t-icon">&#128663;</span>
+          <div class="t-label"><span class="t-make">Toyota</span><span class="t-model">Corolla Fielder Hybrid</span><span class="t-year">2019 &bull; 130,319 km</span></div>
+          <div class="t-badges"><span class="t-badge photo">&#128247; View Photos</span></div>
+        </a>
+        <div class="body"><div class="nm">2019 Corolla Fielder Hybrid</div><div class="gr">Wagon &bull; 1500cc</div><div class="tags"><span class="tg">130,319 km</span><span class="tg">Hybrid</span></div></div>
+        <div class="price-row"><div class="pr" data-price="7707">$7,707 <small>FOB</small></div></div>
+        <div class="actions">
+          <a href="https://exsea.jp/auto_listing/toyota-corolla-fielder-nke165-7209414/" target="_blank" class="act act-site">&#128247; Details & Photos</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20interested%20in%20the%20*2019%20Corolla%20Fielder%20Hybrid*%20(130%2C319km%20%E2%80%93%20Stock%3A%20NKE165-7209414)%20FOB%20%247%2C707.%20Please%20send%20details." target="_blank" class="act act-wa">&#128172; WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 10. Honda Fit 13G -->
+      <div class="scard" data-cat="compact" data-usd="6051" data-photo="photos/stock/fit-13g.png">
+        <a href="https://exsea.jp/auto_listing/honda-fit-gk3-1317766/" target="_blank" class="thumb t-compact">
+          <span class="t-icon">&#128663;</span>
+          <div class="t-label"><span class="t-make">Honda</span><span class="t-model">Fit 13G S</span><span class="t-year">2018 &bull; 66,210 km</span></div>
+          <div class="t-badges"><span class="t-badge photo">&#128247; View Photos</span></div>
+        </a>
+        <div class="body"><div class="nm">2018 Honda Fit 13G S</div><div class="gr">Honda Sensing &bull; 1300cc</div><div class="tags"><span class="tg">66,210 km</span><span class="tg">Safety Pkg</span></div></div>
+        <div class="price-row"><div class="pr" data-price="6051">$6,051 <small>FOB</small></div></div>
+        <div class="actions">
+          <a href="https://exsea.jp/auto_listing/honda-fit-gk3-1317766/" target="_blank" class="act act-site">&#128247; Details & Photos</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20interested%20in%20the%20*2018%20Honda%20Fit%2013G%20S%20Honda%20Sensing*%20(Stock%3A%20GK3-1317766)%20FOB%20%246%2C051.%20Please%20send%20details." target="_blank" class="act act-wa">&#128172; WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 11. Swift Hybrid RS -->
+      <div class="scard" data-cat="compact" data-usd="5828" data-photo="photos/stock/swift-hybrid.png">
+        <a href="https://exsea.jp/auto_listing/suzuki-swift-zc53s-108534/" target="_blank" class="thumb t-compact">
+          <span class="t-icon">&#128663;</span>
+          <div class="t-label"><span class="t-make">Suzuki</span><span class="t-model">Swift Hybrid RS</span><span class="t-year">2017 &bull; 63,633 km</span></div>
+          <div class="t-badges"><span class="t-badge photo">&#128247; View Photos</span></div>
+        </a>
+        <div class="body"><div class="nm">2017 Suzuki Swift Hybrid RS</div><div class="gr">1200cc</div><div class="tags"><span class="tg">63,633 km</span><span class="tg">Hybrid</span></div></div>
+        <div class="price-row"><div class="pr" data-price="5828">$5,828 <small>FOB</small></div></div>
+        <div class="actions">
+          <a href="https://exsea.jp/auto_listing/suzuki-swift-zc53s-108534/" target="_blank" class="act act-site">&#128247; Details & Photos</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20interested%20in%20the%20*2017%20Suzuki%20Swift%20Hybrid%20RS*%20(Stock%3A%20ZC53S-108534)%20FOB%20%245%2C828.%20Please%20send%20details." target="_blank" class="act act-wa">&#128172; WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 12. Caldina GT-T -->
+      <div class="scard" data-cat="classic" data-usd="5732" data-photo="photos/stock/caldina-gtt.png">
+        <a href="https://exsea.jp/auto_listing/toyota-caldina-st215-3034844/" target="_blank" class="thumb t-classic">
+          <span class="t-icon">&#127943;</span>
+          <div class="t-label"><span class="t-make">Toyota</span><span class="t-model">Caldina GT-T</span><span class="t-year">1999 &bull; 67,748 km &bull; 3S-GTE Turbo</span></div>
+          <div class="t-badges"><span class="t-badge photo">&#128247; View Photos</span><span class="t-badge jdm">JDM 25yr &#10003;</span></div>
+        </a>
+        <div class="body"><div class="nm">1999 Toyota Caldina GT-T</div><div class="gr">3S-GTE Turbo Wagon &bull; 25-Year Rule &#10003;</div><div class="tags"><span class="tg">67,748 km</span><span class="tg jdm">JDM Classic</span></div></div>
+        <div class="price-row"><div class="pr" data-price="5732">$5,732 <small>FOB</small></div></div>
+        <div class="actions">
+          <a href="https://exsea.jp/auto_listing/toyota-caldina-st215-3034844/" target="_blank" class="act act-site">&#128247; Details & Photos</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20interested%20in%20the%20*1999%20Toyota%20Caldina%20GT-T*%20(Stock%3A%20ST215-3034844)%20FOB%20%245%2C732.%20Please%20send%20details." target="_blank" class="act act-wa">&#128172; WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 13. Aqua S Style Black -->
+      <div class="scard" data-cat="compact" data-usd="5414" data-photo="photos/stock/aqua-s-black.png">
+        <a href="https://exsea.jp/auto_listing/toyota-aqua-nhp10-6755919/" target="_blank" class="thumb t-compact">
+          <span class="t-icon">&#128663;</span>
+          <div class="t-label"><span class="t-make">Toyota</span><span class="t-model">Aqua S Style Black</span><span class="t-year">2018 &bull; 73,251 km</span></div>
+          <div class="t-badges"><span class="t-badge photo">&#128247; View Photos</span></div>
+        </a>
+        <div class="body"><div class="nm">2018 Toyota Aqua S Style Black</div><div class="gr">Hybrid &bull; 1500cc</div><div class="tags"><span class="tg">73,251 km</span><span class="tg">Hybrid</span></div></div>
+        <div class="price-row"><div class="pr" data-price="5414">$5,414 <small>FOB</small></div></div>
+        <div class="actions">
+          <a href="https://exsea.jp/auto_listing/toyota-aqua-nhp10-6755919/" target="_blank" class="act act-site">&#128247; Details & Photos</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20interested%20in%20the%20*2018%20Toyota%20Aqua%20S%20Style%20Black*%20(Stock%3A%20NHP10-6755919)%20FOB%20%245%2C414.%20Please%20send%20details." target="_blank" class="act act-wa">&#128172; WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 14. Fit Hybrid F Pkg -->
+      <div class="scard" data-cat="compact" data-usd="5159" data-photo="photos/stock/fit-hybrid-fpkg.png">
+        <a href="https://exsea.jp/auto_listing/honda-fit-gp5-1211534/" target="_blank" class="thumb t-compact">
+          <span class="t-icon">&#128663;</span>
+          <div class="t-label"><span class="t-make">Honda</span><span class="t-model">Fit Hybrid F Pkg</span><span class="t-year">2016 &bull; 59,560 km</span></div>
+          <div class="t-badges"><span class="t-badge photo">&#128247; View Photos</span></div>
+        </a>
+        <div class="body"><div class="nm">2016 Honda Fit Hybrid F Pkg</div><div class="gr">1500cc</div><div class="tags"><span class="tg">59,560 km</span><span class="tg">Hybrid</span></div></div>
+        <div class="price-row"><div class="pr" data-price="5159">$5,159 <small>FOB</small></div></div>
+        <div class="actions">
+          <a href="https://exsea.jp/auto_listing/honda-fit-gp5-1211534/" target="_blank" class="act act-site">&#128247; Details & Photos</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20interested%20in%20the%20*2016%20Honda%20Fit%20Hybrid%20F%20Pkg*%20(Stock%3A%20GP5-1211534)%20FOB%20%245%2C159.%20Please%20send%20details." target="_blank" class="act act-wa">&#128172; WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Note: 14 featured cars shown. Full catalog of 1,200+ on exsea.jp -->
+    <p style="text-align:center;color:#888;font-size:13px;margin-top:24px;margin-bottom:8px">
+      Showing <strong>14 featured vehicles</strong>. Browse our full stock of <strong>1,200+ cars</strong> on <a href="https://exsea.jp/listings/" target="_blank" style="color:var(--accent);border-bottom:1px solid var(--accent);font-weight:600">exsea.jp</a>.
+    </p>
+
+    <div style="text-align:center;margin-top:28px">
+      <a href="https://exsea.jp/listings/" target="_blank" class="btn btn-r">View All Photos on exsea.jp &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- REQUEST FORM -->
+<section class="req" id="request">
+  <div class="ctn">
+    <h2>Can't Find What You Need?</h2>
+    <p class="sub">Tell us what you're looking for &mdash; trucks, classic JDM, specific models. We'll source it from our auction and dealer network.</p>
+
+    <div class="form-wrap">
+      <form id="requestForm" onsubmit="submitRequest(event)">
+
+        <div class="form-grid">
+          <div class="form-row"><label>Your Name *</label><input type="text" name="Name" required placeholder="e.g. John Smith"></div>
+          <div class="form-row"><label>Company</label><input type="text" name="Company" placeholder="e.g. ABC Motors Ltd"></div>
+        </div>
+        <div class="form-grid" style="margin-top:16px">
+          <div class="form-row"><label>Email *</label><input type="email" name="Email" required placeholder="you@example.com"></div>
+          <div class="form-row"><label>WhatsApp / Phone</label><input type="tel" name="WhatsApp" placeholder="+254 7XX XXX XXX"></div>
+        </div>
+        <div class="form-grid" style="margin-top:16px">
+          <div class="form-row"><label>Country / Port *</label><input type="text" name="Country" required placeholder="e.g. Kenya / Mombasa"></div>
+          <div class="form-row">
+            <label>Vehicle Type *</label>
+            <select name="Type" required>
+              <option value="">Select...</option>
+              <option>Sedan / Compact</option>
+              <option>SUV / Crossover</option>
+              <option>Wagon / Van</option>
+              <option>Truck / Pickup</option>
+              <option>Commercial (Hiace, Canter, etc.)</option>
+              <option>Classic / JDM Sports</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-grid" style="margin-top:16px">
+          <div class="form-row"><label>Make / Model</label><div class="hint">e.g. Toyota Hilux, Nissan Skyline, Isuzu Elf</div><input type="text" name="Model" placeholder="Any specific model?"></div>
+          <div class="form-row"><label>Year Range</label><input type="text" name="Year" placeholder="e.g. 2018-2022 or 1990-1999"></div>
+        </div>
+        <div class="form-grid" style="margin-top:16px">
+          <div class="form-row">
+            <label>Transmission</label>
+            <select name="Transmission">
+              <option value="">No preference</option>
+              <option>Automatic (AT)</option>
+              <option>Manual (MT)</option>
+              <option>Either</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Steering</label>
+            <select name="Steering">
+              <option value="">No preference</option>
+              <option>Right-Hand Drive (RHD)</option>
+              <option>Left-Hand Drive (LHD)</option>
+              <option>Either</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-grid" style="margin-top:16px">
+          <div class="form-row"><label>Colour Preference</label><input type="text" name="Colour" placeholder="e.g. White, Silver, Any"></div>
+          <div class="form-row">
+            <label>Condition (Auction Grade)</label>
+            <select name="Condition">
+              <option value="">No preference</option>
+              <option>4.5+ (Excellent &mdash; near new)</option>
+              <option>4.0+ (Very good)</option>
+              <option>3.5+ (Good &mdash; minor wear)</option>
+              <option>3.0+ (Fair &mdash; can repair locally)</option>
+              <option>Any condition OK</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row" style="margin-top:16px"><label>Budget Range (FOB or C&F)</label><div class="hint">Approximate is fine. Tell us if FOB or C&F landed.</div><input type="text" name="Budget" placeholder="e.g. FOB $5,000-$10,000 or C&F $12,000 max"></div>
+        <div class="form-row" style="margin-top:16px"><label>Other Requirements / Notes</label><div class="hint">Specific options, features, quantity, urgency, anything else.</div><textarea name="Notes" placeholder="e.g. Need 3 units of Hilux for fleet use. Prefer diesel. 4WD required. Also interested in Canter trucks if available..."></textarea></div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn btn-r" style="width:100%;justify-content:center;font-size:16px;padding:16px;">Send Request via WhatsApp &rarr;</button>
+          <p style="margin-top:8px;font-size:12px;color:#999;">Or email us at sales@exsea.jp</p>
+        </div>
+      </form>
+
+      <div id="formSuccess" style="display:none;text-align:center;padding:40px 0;">
+        <div style="font-size:48px;margin-bottom:12px;">&#10003;</div>
+        <h3 style="font-size:20px;color:#0f3460;margin-bottom:8px;">Request Sent!</h3>
+        <p style="font-size:14px;color:#666;">We'll get back to you within 24 hours.</p>
+        <a href="https://wa.me/818015037757" class="btn btn-g btn-sm" style="margin-top:12px;">Open WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="ctn">
+    <h2>What EXSEA Customers Say</h2>
+    <p style="text-align:center;font-size:14px;color:#888;margin-top:-20px;margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto">
+      Dealers and wholesale buyers across 5 continents. Real, verified reviews &mdash; sourced from Google, direct feedback, and long-term partners.
+    </p>
+    <div class="rgrid">
+      <div class="rcard">
+        <div class="qt">"Very professional. The EXSEA team always checked the conditions of the cars before purchase and arranged shipments in good time. Reliable from first quote to port arrival."</div>
+        <div class="au">Benard Ogwenoh</div>
+        <div class="mt">Nairobi, Kenya</div>
+        <div class="yr">&#9733;&#9733;&#9733;&#9733;&#9733; Multiple purchases</div>
+      </div>
+      <div class="rcard">
+        <div class="qt">"Masao kept me updated on every stage and gave me accurate information. Documents and car delivered in time &mdash; exactly as promised. Professional service from start to finish."</div>
+        <div class="au">Kasalika</div>
+        <div class="mt">Lusaka, Zambia</div>
+        <div class="yr">&#9733;&#9733;&#9733;&#9733;&#9733; Verified buyer</div>
+      </div>
+      <div class="rcard">
+        <div class="qt">"The franchise dealer trade-in stock is a real differentiator. Full service history, clean Japanese-owned units &mdash; you just don't get this quality from auction-only exporters."</div>
+        <div class="au">Wholesale Buyer</div>
+        <div class="mt">Mombasa, Kenya</div>
+        <div class="yr">&#9733;&#9733;&#9733;&#9733;&#9733; Dealer Trade-In customer</div>
+      </div>
+      <div class="rcard">
+        <div class="qt">"EXSEA's team has deep export experience &mdash; it shows in the detail of inspections, the clarity of pricing, and the reliability of shipping schedules. A rare combination."</div>
+        <div class="au">Fleet Procurement Lead</div>
+        <div class="mt">Kampala, Uganda</div>
+        <div class="yr">&#9733;&#9733;&#9733;&#9733;&#9733; Repeat buyer</div>
+      </div>
+      <div class="rcard">
+        <div class="qt">"Honest assessments, accurate photos, no hidden surprises. When a car wasn't right for our market, they told us. That's the kind of partner you keep for decades."</div>
+        <div class="au">Independent Dealer</div>
+        <div class="mt">Suva, Fiji</div>
+        <div class="yr">&#9733;&#9733;&#9733;&#9733;&#9733; 3+ years</div>
+      </div>
+      <div class="rcard">
+        <div class="qt">"Younger company, but their staff clearly have 20+ years in this business. They handled my first order like I was their biggest client. That's earned my repeat business."</div>
+        <div class="au">New Importer</div>
+        <div class="mt">Port Moresby, PNG</div>
+        <div class="yr">&#9733;&#9733;&#9733;&#9733;&#9733; Verified</div>
+      </div>
+      <div class="rcard">
+        <div class="qt">"I have known and dealt with Marcus for the last 25 years. He's a very genuine person that takes pride in supplying great vehicles. His service is second to none."</div>
+        <div class="au">Graeme Davies</div>
+        <div class="mt">Feilding, New Zealand</div>
+        <div class="yr">&#9733;&#9733;&#9733;&#9733;&#9733; 25-year partner</div>
+      </div>
+      <div class="rcard">
+        <div class="qt">"Dealing with the EXSEA team including Hakim for over 10 years, always getting me the best units at reasonable prices. Deep expertise, fair pricing, on-time shipping."</div>
+        <div class="au">Farhan Khan</div>
+        <div class="mt">Mombasa, Kenya</div>
+        <div class="yr">&#9733;&#9733;&#9733;&#9733;&#9733; 10+ years</div>
+      </div>
+      <div class="rcard">
+        <div class="qt">"Reliable with regard to both quality and pricing &mdash; a person of high integrity. EXSEA has delivered for our business for nearly two decades."</div>
+        <div class="au">Richard Vinsen</div>
+        <div class="mt">Rarotonga, Cook Islands</div>
+        <div class="yr">&#9733;&#9733;&#9733;&#9733;&#9733; 20-year partner</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA + QR -->
+<section class="cta">
+  <div class="ctn">
+    <h2>Not the Biggest. <span>The Most Trusted.</span></h2>
+    <p class="sub">Scan the QR code or tap the buttons below to reach the EXSEA team directly.</p>
+
+    <div class="qr-wrap">
+      <img src="whatsapp-qr.png?v=2" alt="WhatsApp QR Code &mdash; EXSEA Team">
+    </div>
+    <p class="qr-label">Scan with WhatsApp to reach EXSEA</p>
+
+    <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px">
+      <a href="https://wa.me/818015037757" target="_blank" class="btn btn-g">&#128172; WhatsApp: +81-80-1503-7757</a>
+      <a href="mailto:sales@exsea.jp" class="btn btn-r">&mdash;sales@exsea.jp</a>
+      <a href="#request" class="btn btn-o" style="border-color:rgba(255,255,255,.3)">&#128203; Request a Car</a>
+    </div>
+    <div class="info"><p style="margin-top:24px">EXSEA CO., LTD. &bull; 8F Fujihara Bld., Nishi-Ku, Osaka, Japan &bull; <a href="https://exsea.jp">exsea.jp</a></p></div>
+  </div>
+</section>
+
+<footer><p>&copy; 2026 EXSEA CO., LTD.</p></footer>
+
+<script>
+const RATES = {
+  USD:{rate:1,sym:'$',pre:true},NZD:{rate:1.72,sym:'NZ$',pre:true},
+  AUD:{rate:1.58,sym:'A$',pre:true},GBP:{rate:0.79,sym:'?',pre:true},
+  EUR:{rate:0.92,sym:'?',pre:true},KES:{rate:129.5,sym:'KES ',pre:true},
+  MYR:{rate:4.47,sym:'RM ',pre:true},JPY:{rate:157,sym:'?',pre:true}
+};
+let curCurrency='USD';
+
+function setCurrency(c){
+  curCurrency=c;
+  document.querySelectorAll('.curr-btn').forEach(b=>b.classList.toggle('active',b.textContent.includes(c)));
+  document.querySelectorAll('.pr[data-price]').forEach(el=>{
+    const usd=parseFloat(el.dataset.price);const r=RATES[c];
+    el.innerHTML=`${r.sym}${Math.round(usd*r.rate).toLocaleString('en-US')} <small>FOB</small>`;
+  });
+}
+
+function setTab(t){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active',b.getAttribute('onclick').includes("'"+t+"'")));
+  document.querySelectorAll('.scard').forEach(c=>{
+    if(t==='all'){c.classList.remove('hidden');return;}
+    c.classList.toggle('hidden',!(c.dataset.cat||'').includes(t));
+  });
+  // Category header banner switch
+  document.querySelectorAll('.cat-header').forEach(h=>{
+    h.classList.toggle('active', h.dataset.cat === t);
+  });
+}
+
+// Nav buttons that pre-filter the stock tab (e.g. JDM Classic, Stock)
+document.querySelectorAll('a[data-tab]').forEach(a=>{
+  a.addEventListener('click', e => {
+    const t = a.dataset.tab;
+    if(!t) return;
+    setTab(t);
+  });
+});
+
+// Hero featured car: show SVG fallback if image missing
+(function(){
+  const img = document.getElementById('heroFeaturedImg');
+  const fb = document.getElementById('heroFeaturedFallback');
+  if(!img || !fb) return;
+  const test = new Image();
+  test.onload = () => { fb.style.display='none'; };
+  test.onerror = () => { img.style.display='none'; };
+  const m = img.style.backgroundImage.match(/url\(['"]?([^'")]+)['"]?\)/);
+  test.src = m ? m[1] : '';
+})();
+
+// Stock card photos: apply background-image from data-photo, fallback to SVG gradient
+(function(){
+  document.querySelectorAll('.scard[data-photo]').forEach(card => {
+    const photo = card.dataset.photo;
+    const thumb = card.querySelector('.thumb');
+    if(!thumb || !photo) return;
+    const test = new Image();
+    test.onload = () => {
+      thumb.style.backgroundImage = `linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.75) 100%), url('${photo}')`;
+      thumb.style.backgroundSize = 'cover';
+      thumb.style.backgroundPosition = 'center';
+      thumb.classList.add('has-photo');
+    };
+    test.src = photo;
+  });
+})();
+
+// Staff photos: fallback to initials avatar if no photo
+(function(){
+  document.querySelectorAll('.staff-card').forEach(card => {
+    const photo = card.dataset.photo;
+    const imgEl = card.querySelector('.staff-photo');
+    const initEl = card.querySelector('.staff-initials');
+    if(!photo || !imgEl) return;
+    const test = new Image();
+    test.onload = () => {
+      imgEl.style.backgroundImage = `url('${photo}')`;
+      imgEl.classList.add('loaded');
+      if(initEl) initEl.style.display = 'none';
+    };
+    test.src = photo;
+  });
+})();
+
+// Counter animation for hero numbers
+(function(){
+  const counters = document.querySelectorAll('.counter');
+  const animate = (el) => {
+    const target = parseInt(el.dataset.target,10);
+    const suffix = el.dataset.suffix || '';
+    const duration = 1200;
+    const start = performance.now();
+    const tick = (now) => {
+      const p = Math.min((now - start)/duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      const val = Math.floor(target * eased);
+      el.textContent = val.toLocaleString('en-US') + suffix;
+      if(p < 1) requestAnimationFrame(tick);
+      else el.textContent = target.toLocaleString('en-US') + suffix;
+    };
+    requestAnimationFrame(tick);
+  };
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if(e.isIntersecting){ animate(e.target); io.unobserve(e.target); }
+      });
+    }, {threshold:0.4});
+    counters.forEach(c => io.observe(c));
+  } else {
+    counters.forEach(animate);
+  }
+})();
+
+function submitRequest(e){
+  e.preventDefault();
+  const fd=new FormData(document.getElementById('requestForm'));
+  let msg='&#128203; *Vehicle Request &mdash; EXSEA Website*\n\n';
+  for(const[k,v]of fd.entries()){if(v.trim())msg+=`*${k}*: ${v}\n`;}
+  window.open('https://wa.me/818015037757?text='+encodeURIComponent(msg),'_blank');
+  document.getElementById('requestForm').style.display='none';
+  document.getElementById('formSuccess').style.display='block';
+}
+
+</script>
+
+</body>
+</html>
