@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://raitom-cyber.github.io/exsea-landing-page/sitemap.xml
