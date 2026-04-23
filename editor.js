@@ -30,9 +30,11 @@
   .edit-bar .save-btn:disabled{background:#888;cursor:not-allowed}
   .edit-bar .cnt{background:rgba(0,0,0,.18);padding:2px 8px;border-radius:10px;font-weight:900}
   body.edit-mode{padding-top:42px !important}
-  body.edit-mode .pr[data-price]{outline:2px dashed #f5c518;outline-offset:3px;cursor:pointer;border-radius:4px;position:relative}
-  body.edit-mode .pr[data-price]:hover{outline-color:#25D366;background:rgba(37,211,102,.12)}
-  body.edit-mode .pr[data-price]::after{content:'✎';position:absolute;top:-12px;right:-10px;background:#f5c518;color:#000;padding:1px 6px;border-radius:50%;font-size:11px;font-weight:900;border:1px solid #000}
+  body.edit-mode .pr[data-price],body.edit-mode .pr.pr-poa{outline:2px dashed #f5c518;outline-offset:3px;cursor:pointer;border-radius:4px;position:relative}
+  body.edit-mode .pr[data-price]:hover,body.edit-mode .pr.pr-poa:hover{outline-color:#25D366;background:rgba(37,211,102,.12)}
+  body.edit-mode .pr[data-price]::after,body.edit-mode .pr.pr-poa::after{content:'✎';position:absolute;top:-12px;right:-10px;background:#f5c518;color:#000;padding:1px 6px;border-radius:50%;font-size:11px;font-weight:900;border:1px solid #000}
+  body.edit-mode .pr.pr-poa::before{content:'POA → 価格設定で在庫車に変換';position:absolute;bottom:100%;left:0;background:#0b0b1a;color:#fff;padding:3px 7px;border-radius:4px;font-size:10px;font-weight:600;white-space:nowrap;margin-bottom:6px;opacity:0;transition:opacity .15s;pointer-events:none}
+  body.edit-mode .pr.pr-poa:hover::before{opacity:1}
   body.edit-mode [data-editable-text]{outline:2px dashed #4a9eff;outline-offset:3px;cursor:text;border-radius:4px;min-height:1.2em}
   body.edit-mode [data-editable-text]:hover{outline-color:#25D366}
   body.edit-mode [data-editable-text]:focus{outline-color:#25D366;background:rgba(37,211,102,.08);outline-style:solid}
@@ -82,6 +84,13 @@
       openPriceDialog(el);
     });
   });
+  // POA cards: click to set a real price (promotes them out of "POA / 要相談")
+  document.querySelectorAll('.pr.pr-poa').forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault(); e.stopPropagation();
+      openPoaDialog(el);
+    });
+  });
 
   function openPriceDialog(el) {
     const currentUsd = el.dataset.price;
@@ -112,6 +121,47 @@
       el.dataset.price = v;
       if (window.setCurrency) window.setCurrency(window.curCurrency || 'USD');
       changes.set(key, { type: 'price', original: el.__origPrice, current: String(v), element: el });
+      upd();
+      close();
+    };
+    document.getElementById('edOk').onclick = submit;
+    inp.onkeydown = e => { if (e.key === 'Enter') submit(); };
+  }
+
+  function openPoaDialog(el) {
+    const card = el.closest('.scard');
+    const dataUsd = card && card.dataset.usd ? card.dataset.usd : '';
+    const bd = document.createElement('div');
+    bd.className = 'edit-dialog-bd';
+    bd.innerHTML = `
+      <div class="edit-dialog">
+        <h3>POA → 価格を設定</h3>
+        <div class="hint">この POA カード (data-usd=${dataUsd || '不明'}) に実価格を入れて在庫車表示に変換します。</div>
+        <input type="number" id="edPrc" value="${dataUsd}" min="0" step="100" inputmode="numeric" placeholder="USD 価格">
+        <div class="bts">
+          <button class="sc" id="edCancel">キャンセル</button>
+          <button class="pr" id="edOk">価格を設定</button>
+        </div>
+      </div>`;
+    document.body.appendChild(bd);
+    const inp = document.getElementById('edPrc');
+    inp.focus(); inp.select();
+    const close = () => bd.remove();
+    document.getElementById('edCancel').onclick = close;
+    bd.onclick = e => { if (e.target === bd) close(); };
+    const submit = () => {
+      const v = parseInt(inp.value, 10);
+      if (!v || v <= 0 || !dataUsd) return;
+      const fmt = '$' + Number(v).toLocaleString('en-US');
+      el.classList.remove('pr-poa');
+      el.dataset.price = String(v);
+      el.innerHTML = `${fmt} <small>FOB</small>`;
+      el.removeAttribute('contenteditable');
+      el.removeAttribute('data-editable-text');
+      el.__edRegistered = false;
+      el.addEventListener('click', ev => { ev.preventDefault(); ev.stopPropagation(); openPriceDialog(el); });
+      const key = 'poa_' + dataUsd;
+      changes.set(key, { type: 'poa-price', dataUsd, current: String(v), element: el });
       upd();
       close();
     };
@@ -235,6 +285,25 @@
             html = split_join(html, oldEnc, newEnc);
             ok = true;
           }
+        } else if (ch.type === 'poa-price') {
+          // Locate the unique parent .scard.src-card by data-usd, then within that card
+          // swap the <div class="pr pr-poa">...</div> for a real price row and update data-usd.
+          const fmt = '$' + Number(ch.current).toLocaleString('en-US');
+          const newPr = '<div class="pr" data-price="' + ch.current + '">' + fmt + ' <small>FOB</small></div>';
+          const cardStart = '<div class="scard src-card" data-cat="classic" data-usd="' + ch.dataUsd + '">';
+          const idx = html.indexOf(cardStart);
+          if (idx >= 0) {
+            const after = html.indexOf('<div class="scard', idx + cardStart.length);
+            const endHorizon = after > 0 ? after : html.length;
+            const slice = html.slice(idx, endHorizon);
+            const poaPattern = /<div class="pr pr-poa">[^<]*<small>[^<]*<\/small><\/div>/;
+            if (poaPattern.test(slice)) {
+              const updatedStart = cardStart.replace('data-usd="' + ch.dataUsd + '"', 'data-usd="' + ch.current + '"');
+              const newSlice = slice.replace(poaPattern, newPr).replace(cardStart, updatedStart);
+              html = html.slice(0, idx) + newSlice + html.slice(endHorizon);
+              ok = true;
+            }
+          }
         } else if (ch.type === 'text') {
           const orig = ch.original;
           const cur  = ch.current;
@@ -329,5 +398,5 @@
   }
 
   upd();
-  toast('編集モード ON — 価格はクリック、テキストは直接編集できます', 'ok', 4500);
+  toast('編集モード ON — 価格・POAをクリック、テキストは直接編集できます', 'ok', 4500);
 })();
