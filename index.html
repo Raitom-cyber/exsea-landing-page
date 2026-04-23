@@ -200,30 +200,30 @@
     .pcard p{font-size:14px;color:#666;line-height:1.6}
     .pcard .proof{margin-top:12px;padding-top:12px;border-top:1px solid #eee;font-size:12px;color:#999;font-style:italic}
 
-    /* TEAM */
-    .team{padding:72px 0;background:linear-gradient(180deg,#fff 0%,#f8f9fb 100%)}
-    .team h2{text-align:center;font-size:28px;font-weight:900;margin-bottom:6px;letter-spacing:-.5px}
+    /* TEAM (compact) */
+    .team{padding:44px 0 40px;background:linear-gradient(180deg,#fff 0%,#f8f9fb 100%)}
+    .team h2{text-align:center;font-size:22px;font-weight:900;margin-bottom:4px;letter-spacing:-.3px}
     .team h2 em{font-style:normal;color:#e94560}
-    .team .team-sub{text-align:center;font-size:14px;color:#666;max-width:580px;margin:0 auto 36px;line-height:1.6}
-    .team .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:960px;margin:0 auto}
-    .staff-card{background:#fff;border-radius:14px;padding:24px 20px;text-align:center;border:1px solid #eee;transition:all .25s;position:relative;overflow:hidden}
-    .staff-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#e94560,#f5c518);transform:scaleX(0);transform-origin:left;transition:transform .3s}
-    .staff-card:hover{box-shadow:0 12px 30px rgba(0,0,0,.08);transform:translateY(-3px)}
+    .team .team-sub{text-align:center;font-size:12.5px;color:#666;max-width:560px;margin:0 auto 22px;line-height:1.55}
+    .team .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;max-width:1080px;margin:0 auto}
+    .staff-card{background:#fff;border-radius:10px;padding:14px 12px 12px;text-align:center;border:1px solid #eee;transition:all .2s;position:relative;overflow:hidden}
+    .staff-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#e94560,#f5c518);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+    .staff-card:hover{box-shadow:0 6px 18px rgba(0,0,0,.07);transform:translateY(-2px)}
     .staff-card:hover::before{transform:scaleX(1)}
-    .staff-photo{width:110px;height:110px;border-radius:50%;margin:0 auto 14px;background:linear-gradient(135deg,#0f3460,#533483);background-size:cover;background-position:center;position:relative;border:3px solid #fff;box-shadow:0 6px 20px rgba(15,52,96,.25);display:flex;align-items:center;justify-content:center}
+    .staff-photo{width:64px;height:64px;border-radius:50%;margin:0 auto 8px;background:linear-gradient(135deg,#0f3460,#533483);background-size:cover;background-position:center;position:relative;border:2px solid #fff;box-shadow:0 3px 10px rgba(15,52,96,.22);display:flex;align-items:center;justify-content:center}
     .staff-photo.loaded .staff-initials{display:none}
-    .staff-initials{color:#fff;font-size:30px;font-weight:900;letter-spacing:-1px}
-    .staff-name{font-size:18px;font-weight:800;color:#0b0b1a;margin-bottom:2px}
-    .staff-role{font-size:12px;color:#e94560;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px}
-    .staff-exp{display:inline-block;background:#f8f9fb;border:1px solid #eee;padding:3px 10px;border-radius:20px;font-size:11px;color:#555;font-weight:700;margin-bottom:10px}
-    .staff-bio{font-size:12.5px;color:#666;line-height:1.55;min-height:52px}
-    .staff-specialty{margin-top:10px;padding-top:10px;border-top:1px dashed #eee;font-size:11px;color:#0f3460;font-weight:700}
-    .staff-lang{margin-top:6px;font-size:11px;color:#888}
+    .staff-initials{color:#fff;font-size:18px;font-weight:900;letter-spacing:-0.5px}
+    .staff-name{font-size:13.5px;font-weight:800;color:#0b0b1a;margin-bottom:2px;line-height:1.2}
+    .staff-role{font-size:9.5px;color:#e94560;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;line-height:1.2}
+    .staff-exp{display:inline-block;background:#f8f9fb;border:1px solid #eee;padding:2px 8px;border-radius:12px;font-size:9.5px;color:#555;font-weight:700;margin-bottom:6px}
+    .staff-bio{font-size:11px;color:#666;line-height:1.45;min-height:42px}
+    .staff-specialty{margin-top:6px;padding-top:6px;border-top:1px dashed #eee;font-size:9.5px;color:#0f3460;font-weight:700;line-height:1.3}
+    .staff-lang{margin-top:4px;font-size:9.5px;color:#888}
 
-    .team-stats{display:flex;justify-content:center;gap:32px;margin:36px auto 0;max-width:600px;padding:20px;background:#fff;border-radius:12px;border:1px solid #eee;flex-wrap:wrap;text-align:center}
+    .team-stats{display:flex;justify-content:center;gap:20px;margin:18px auto 0;max-width:560px;padding:12px 14px;background:#fff;border-radius:10px;border:1px solid #eee;flex-wrap:wrap;text-align:center}
     .team-stats .ts{text-align:center}
-    .team-stats .ts-v{font-size:24px;font-weight:900;color:#e94560}
-    .team-stats .ts-l{font-size:10px;color:#888;letter-spacing:1px;text-transform:uppercase;margin-top:3px}
+    .team-stats .ts-v{font-size:18px;font-weight:900;color:#e94560}
+    .team-stats .ts-l{font-size:9px;color:#888;letter-spacing:1px;text-transform:uppercase;margin-top:2px}
 
     .qbanner{background:#0f3460;padding:40px 0;text-align:center}
     .qbanner blockquote{font-size:18px;color:#fff;font-weight:500;font-style:italic;line-height:1.6;max-width:640px;margin:0 auto}
@@ -320,6 +320,10 @@
     .scard .thumb .t-badge{font-size:10px;font-weight:600;padding:3px 8px;border-radius:4px;backdrop-filter:blur(4px)}
     .scard .thumb .t-badge.photo{background:rgba(255,255,255,.15);color:#fff}
     .scard .thumb .t-badge.jdm{background:rgba(233,69,96,.7);color:#fff}
+    .scard .thumb .t-badge.src{background:rgba(245,197,24,.85);color:#0b0b1a;font-weight:800;letter-spacing:.5px}
+    .scard.src-card{border:1px solid #e8d48f;box-shadow:0 2px 12px rgba(245,197,24,.12)}
+    .scard.src-card .pr{font-size:17px}
+    .scard.src-card .pr small{color:#b88904;font-weight:700}
     .scard .thumb:hover{filter:brightness(1.1)}
 
     .scard .body{padding:16px 20px}
@@ -750,54 +754,54 @@
       letter-spacing:.3px;
     }
 
-    /* ============ TEAM ============ */
-    .team{padding:88px 0;background:linear-gradient(180deg,#fff 0%,var(--paper) 100%)}
-    .team h2{font-size:32px;font-weight:700;letter-spacing:-0.025em;margin-bottom:10px}
-    .team .team-sub{color:var(--ink-300);font-size:14px}
+    /* ============ TEAM (compact refine) ============ */
+    .team{padding:44px 0 40px;background:linear-gradient(180deg,#fff 0%,var(--paper) 100%)}
+    .team h2{font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:4px}
+    .team .team-sub{color:var(--ink-300);font-size:12.5px}
     .staff-card{
-      background:#fff;border:1px solid var(--line);border-radius:18px;
-      padding:28px 22px 24px;
-      transition:all .35s cubic-bezier(.2,.8,.2,1);
+      background:#fff;border:1px solid var(--line);border-radius:10px;
+      padding:14px 12px 12px;
+      transition:all .25s cubic-bezier(.2,.8,.2,1);
     }
     .staff-card:hover{
-      box-shadow:0 28px 50px -20px rgba(11,11,26,.18);
-      transform:translateY(-4px);border-color:transparent;
+      box-shadow:0 14px 28px -14px rgba(11,11,26,.16);
+      transform:translateY(-2px);border-color:transparent;
     }
     .staff-card::before{
-      height:3px;background:linear-gradient(90deg,var(--accent),var(--gold));
+      height:2px;background:linear-gradient(90deg,var(--accent),var(--gold));
     }
     .staff-photo{
-      width:104px;height:104px;
-      border:4px solid #fff;
+      width:64px;height:64px;
+      border:2px solid #fff;
       box-shadow:
         0 0 0 1px var(--line),
-        0 10px 24px -8px rgba(11,11,26,.25);
+        0 4px 10px -4px rgba(11,11,26,.22);
     }
     .staff-name{
       font-family:'Fraunces',Georgia,serif;
-      font-weight:600;font-size:19px;letter-spacing:-0.01em;color:var(--ink-900);
+      font-weight:600;font-size:13.5px;letter-spacing:-0.01em;color:var(--ink-900);
     }
     .staff-role{
-      font-size:10.5px;letter-spacing:2.5px;font-weight:700;
-      color:var(--accent);margin-bottom:12px;
+      font-size:9px;letter-spacing:1.5px;font-weight:700;
+      color:var(--accent);margin-bottom:6px;
     }
     .staff-exp{
       background:var(--paper);border:1px solid var(--line);
-      color:var(--ink-500);font-size:10.5px;letter-spacing:.5px;
-      padding:4px 12px;border-radius:999px;font-weight:600;
+      color:var(--ink-500);font-size:9.5px;letter-spacing:.3px;
+      padding:2px 8px;border-radius:999px;font-weight:600;
     }
-    .staff-bio{color:var(--ink-500);font-size:12.5px;line-height:1.65}
-    .staff-specialty{color:var(--ink-700);font-size:10.5px;letter-spacing:1px;text-transform:uppercase}
+    .staff-bio{color:var(--ink-500);font-size:11px;line-height:1.5}
+    .staff-specialty{color:var(--ink-700);font-size:9.5px;letter-spacing:.5px;text-transform:uppercase}
     .team-stats{
-      background:#fff;border:1px solid var(--line);border-radius:18px;
-      box-shadow:0 1px 2px rgba(0,0,0,.03),0 12px 30px -15px rgba(11,11,26,.1);
-      padding:24px 20px;gap:44px;
+      background:#fff;border:1px solid var(--line);border-radius:10px;
+      box-shadow:0 1px 2px rgba(0,0,0,.03),0 6px 18px -12px rgba(11,11,26,.1);
+      padding:12px 14px;gap:22px;
     }
     .team-stats .ts-v{
       color:var(--accent);font-weight:700;letter-spacing:-0.02em;
-      font-feature-settings:"tnum";
+      font-feature-settings:"tnum";font-size:18px;
     }
-    .team-stats .ts-l{color:var(--ink-300);letter-spacing:2px}
+    .team-stats .ts-l{color:var(--ink-300);letter-spacing:1px;font-size:9px}
 
     /* ============ QUOTE BANNER ============ */
     .qbanner{
@@ -1352,29 +1356,29 @@
 <section class="team" id="team">
   <div class="ctn">
     <h2>Meet the <em>EXSEA Team</em></h2>
-    <p class="team-sub">The people behind every order. Fresh company, seasoned team &mdash; over <strong>50 combined years</strong> of Japan export expertise at your service.</p>
+    <p class="team-sub">The people behind every order &mdash; over <strong>80+ combined years</strong> of Japan export expertise, 4 continents, 8 languages.</p>
 
     <div class="team-grid">
       <!-- Tom -->
       <div class="staff-card" data-photo="photos/staff/tom.jpg">
         <div class="staff-photo"><span class="staff-initials">TT</span></div>
         <div class="staff-name">Tom Tanaka</div>
-        <div class="staff-role">Managing Director</div>
-        <div class="staff-exp">CEO &bull; 8+ years</div>
-        <div class="staff-bio">Leading EXSEA's growth into African and Middle Eastern markets. Your direct line for partnership inquiries.</div>
-        <div class="staff-specialty">New market development &bull; Dealer partnerships</div>
-        <div class="staff-lang">&mdash;&mdash; &mdash;&mdash; Japanese / English</div>
+        <div class="staff-role">Global Sales Manager</div>
+        <div class="staff-exp">8+ years &bull; Osaka</div>
+        <div class="staff-bio">Global Markets lead. Ex-portside vehicle inspector. Lived 6 years in the US. Attends local auctions weekly.</div>
+        <div class="staff-specialty">New market dev &bull; Dealer partnerships</div>
+        <div class="staff-lang">Japanese / English</div>
       </div>
 
       <!-- Marcus -->
       <div class="staff-card" data-photo="photos/staff/marcus.jpg">
         <div class="staff-photo"><span class="staff-initials">M</span></div>
         <div class="staff-name">Marcus</div>
-        <div class="staff-role"> Export Specialist</div>
-        <div class="staff-exp">25+ years in industry</div>
-        <div class="staff-bio">Oceania &amp; Pacific specialist. Trusted by dealers in New Zealand, Fiji, and Australia for 25 years.</div>
+        <div class="staff-role">Senior Export Specialist</div>
+        <div class="staff-exp">25+ years</div>
+        <div class="staff-bio">Oceania &amp; Pacific specialist. Trusted by dealers in NZ, Fiji, Australia for 25 years.</div>
         <div class="staff-specialty">Pacific markets &bull; JDM classics</div>
-        <div class="staff-lang">&mdash;&mdash; English</div>
+        <div class="staff-lang">English</div>
       </div>
 
       <!-- Hakim -->
@@ -1382,29 +1386,51 @@
         <div class="staff-photo"><span class="staff-initials">H</span></div>
         <div class="staff-name">Hakim</div>
         <div class="staff-role">Africa Desk Lead</div>
-        <div class="staff-exp">15+ years exporting</div>
-        <div class="staff-bio">East Africa region expert. Kenya, Uganda, Tanzania, Zambia specialist. Deep understanding of port logistics.</div>
-        <div class="staff-specialty">Africa markets &bull; Commercial vehicles</div>
-        <div class="staff-lang">&mdash;&mdash; &mdash;&mdash; English / Swahili / Arabic</div>
+        <div class="staff-exp">15+ years</div>
+        <div class="staff-bio">East Africa expert. Kenya, Uganda, Tanzania, Zambia. Deep port logistics knowledge.</div>
+        <div class="staff-specialty">Africa markets &bull; Commercial</div>
+        <div class="staff-lang">English / Swahili / Arabic</div>
       </div>
 
       <!-- Masao -->
       <div class="staff-card" data-photo="photos/staff/masao.jpg">
-        <div class="staff-photo"><span class="staff-initials">M</span></div>
-        <div class="staff-name">Masao</div>
-        <div class="staff-role">Export quality Operations</div>
-        <div class="staff-exp">10+ years operations</div>
-        <div class="staff-bio">Documentation, shipping, and customer updates. Praised by clients for keeping every stage transparent.</div>
-        <div class="staff-specialty">Documentation &bull; Shipping coordination</div>
-        <div class="staff-lang">&mdash;&mdash; &mdash;&mdash; Japanese / English</div>
+        <div class="staff-photo"><span class="staff-initials">MN</span></div>
+        <div class="staff-name">Masao Noda</div>
+        <div class="staff-role">Export Specialist</div>
+        <div class="staff-exp">Since 1999 &bull; 25+ years</div>
+        <div class="staff-bio">NZ, Australia, Fiji, Thailand, Cambodia, Kenya, Zambia, Malawi. Friendly, practical, reliable.</div>
+        <div class="staff-specialty">Global markets &bull; Long-term clients</div>
+        <div class="staff-lang">Japanese / English</div>
+      </div>
+
+      <!-- Jay -->
+      <div class="staff-card" data-photo="photos/staff/jay.jpg">
+        <div class="staff-photo"><span class="staff-initials">JK</span></div>
+        <div class="staff-name">Jay S. Kumbar</div>
+        <div class="staff-role">Global Sales Specialist</div>
+        <div class="staff-exp">JP &amp; India heritage</div>
+        <div class="staff-bio">Raised in Japan with Japanese-Indian heritage. Genuine passion for cars. Energetic, approachable, cross-cultural.</div>
+        <div class="staff-specialty">Worldwide clients &bull; JDM enthusiasts</div>
+        <div class="staff-lang">English / Japanese</div>
+      </div>
+
+      <!-- John -->
+      <div class="staff-card" data-photo="photos/staff/john.jpg">
+        <div class="staff-photo"><span class="staff-initials">JC</span></div>
+        <div class="staff-name">John Chidiwa</div>
+        <div class="staff-role">B2B Sales &bull; Africa</div>
+        <div class="staff-exp">10+ years B2B</div>
+        <div class="staff-bio">Decade+ in Japan's auto export B2B. Zimbabwean. Builds genuine win-win dealer relationships.</div>
+        <div class="staff-specialty">Dealer trade &bull; Africa</div>
+        <div class="staff-lang">Shona / Ndebele / English / JP</div>
       </div>
     </div>
 
     <div class="team-stats">
-      <div class="ts"><div class="ts-v">50+</div><div class="ts-l">Combined Years</div></div>
+      <div class="ts"><div class="ts-v">80+</div><div class="ts-l">Combined Years</div></div>
       <div class="ts"><div class="ts-v">4</div><div class="ts-l">Continents Covered</div></div>
-      <div class="ts"><div class="ts-v">6</div><div class="ts-l">Languages Spoken</div></div>
-      <div class="ts"><div class="ts-v">1-1</div><div class="ts-l">Your Dedicated Contact</div></div>
+      <div class="ts"><div class="ts-v">8</div><div class="ts-l">Languages Spoken</div></div>
+      <div class="ts"><div class="ts-v">1-1</div><div class="ts-l">Dedicated Contact</div></div>
     </div>
   </div>
 </section>
@@ -1565,11 +1591,12 @@
         <div class="cat-text">
           <div class="cat-tag">JDM CLASSIC &bull; 25-YEAR RULE</div>
           <div class="cat-title">Skyline &bull; Supra &bull; RX-7 &bull; Caldina GT-T</div>
-          <div class="cat-desc">Legendary Japanese sports cars &mdash; all eligible under the 25-Year Import Rule (US, Canada, UK). One featured in stock now; more sourced to order via Japanese auctions and our franchise dealer network.</div>
+          <div class="cat-desc">Legendary Japanese sports cars &mdash; all eligible under the 25-Year Import Rule (US, Canada, UK). One in-stock right now plus iconic models sourced to order via Japanese auctions and our franchise dealer network &mdash; Skyline GT-R R34, Supra MK4, RX-7 FD, Silvia S15, Integra Type R, Evo VI and more.</div>
           <div class="cat-stats">
-            <div class="cat-stat"><b>1</b>Featured Now</div>
+            <div class="cat-stat"><b>1</b>In Stock Now</div>
+            <div class="cat-stat"><b>6+</b>Sourceable Icons</div>
             <div class="cat-stat"><b>25yr &#10003;</b>Import Eligible</div>
-            <div class="cat-stat"><b>Sourced</b>To Order</div>
+            <div class="cat-stat"><b>Auction +</b>Dealer Network</div>
           </div>
           <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20looking%20for%20a%20*JDM%20Classic*.%20Model%2Fyear%20of%20interest%3A%20____.%20Budget%3A%20____.%20Please%20advise%20what%27s%20available%20or%20sourceable." target="_blank" class="btn btn-r" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#25D366 0%,#128C7E 100%);padding:11px 18px;font-size:13px;letter-spacing:.5px">&#128172; Request a JDM Classic &rarr;</a>
         </div>
@@ -1774,6 +1801,96 @@
         </div>
       </div>
 
+      <!-- 12b. Nissan Skyline GT-R R34 (Sourced to Order) -->
+      <div class="scard src-card" data-cat="classic" data-usd="150000">
+        <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20looking%20for%20a%20*Nissan%20Skyline%20GT-R%20R34%20(BNR34)*%20sourced%20via%20Japanese%20auction%2Fdealer%20network.%20Budget%3A%20____.%20Year%20preference%3A%20____.%20Grade%3A%20____.%20Please%20advise%20what%27s%20available." target="_blank" class="thumb t-classic">
+          <span class="t-icon">&#127942;</span>
+          <div class="t-label"><span class="t-make">Nissan</span><span class="t-model">Skyline GT-R R34</span><span class="t-year">1999&ndash;2002 &bull; BNR34 &bull; RB26DETT</span></div>
+          <div class="t-badges"><span class="t-badge src">&#11088; SOURCED TO ORDER</span><span class="t-badge jdm">JDM 25yr &#10003;</span></div>
+        </a>
+        <div class="body"><div class="nm">Nissan Skyline GT-R R34 (BNR34)</div><div class="gr">2.6L Twin-Turbo I6 &bull; AWD &bull; 5MT &bull; Icon of JDM</div><div class="tags"><span class="tg jdm">JDM Classic</span><span class="tg hl">25-Year Rule</span><span class="tg">Auction &amp; Dealer Net.</span></div></div>
+        <div class="price-row"><div class="pr" data-price="150000">From $150k <small>FOB &bull; POA</small></div></div>
+        <div class="actions">
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20looking%20for%20a%20*Nissan%20Skyline%20GT-R%20R34%20(BNR34)*%20sourced%20via%20Japanese%20auction%2Fdealer%20network.%20Budget%3A%20____.%20Year%20preference%3A%20____.%20Grade%3A%20____.%20Please%20advise%20what%27s%20available." target="_blank" class="act act-site">&#128269; Source This Car</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%20want%20to%20discuss%20sourcing%20a%20*Nissan%20Skyline%20GT-R%20R34*.%20Please%20share%20current%20market%20availability%20%26%20pricing." target="_blank" class="act act-wa">&#128172; WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 12c. Toyota Supra RZ MK4 (Sourced to Order) -->
+      <div class="scard src-card" data-cat="classic" data-usd="70000">
+        <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20looking%20for%20a%20*Toyota%20Supra%20RZ%20(JZA80)%20MK4*%20sourced%20via%20Japanese%20auction%2Fdealer%20network.%20Budget%3A%20____.%20Year%3A%20____.%20Transmission%3A%20____.%20Please%20advise." target="_blank" class="thumb t-classic">
+          <span class="t-icon">&#127941;</span>
+          <div class="t-label"><span class="t-make">Toyota</span><span class="t-model">Supra RZ (JZA80)</span><span class="t-year">1993&ndash;2002 &bull; MK4 &bull; 2JZ-GTE</span></div>
+          <div class="t-badges"><span class="t-badge src">&#11088; SOURCED TO ORDER</span><span class="t-badge jdm">JDM 25yr &#10003;</span></div>
+        </a>
+        <div class="body"><div class="nm">Toyota Supra RZ (JZA80) MK4</div><div class="gr">3.0L Twin-Turbo 2JZ-GTE &bull; 6MT/AT &bull; Legend status</div><div class="tags"><span class="tg jdm">JDM Classic</span><span class="tg hl">25-Year Rule</span><span class="tg">Grade 4+ sourced</span></div></div>
+        <div class="price-row"><div class="pr" data-price="70000">From $70k <small>FOB &bull; POA</small></div></div>
+        <div class="actions">
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20looking%20for%20a%20*Toyota%20Supra%20RZ%20(JZA80)%20MK4*%20sourced%20via%20Japanese%20auction%2Fdealer%20network.%20Budget%3A%20____.%20Year%3A%20____.%20Transmission%3A%20____.%20Please%20advise." target="_blank" class="act act-site">&#128269; Source This Car</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%20want%20to%20discuss%20sourcing%20a%20*Toyota%20Supra%20MK4%20(JZA80)*.%20Please%20share%20current%20availability." target="_blank" class="act act-wa">&#128172; WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 12d. Mazda RX-7 Type RS FD3S (Sourced to Order) -->
+      <div class="scard src-card" data-cat="classic" data-usd="45000">
+        <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20looking%20for%20a%20*Mazda%20RX-7%20Type%20RS%20(FD3S)*%20sourced%20via%20Japanese%20auction%2Fdealer%20network.%20Budget%3A%20____.%20Year%3A%20____.%20Trim%3A%20____.%20Please%20advise." target="_blank" class="thumb t-classic">
+          <span class="t-icon">&#127940;</span>
+          <div class="t-label"><span class="t-make">Mazda</span><span class="t-model">RX-7 Type RS (FD3S)</span><span class="t-year">1992&ndash;2002 &bull; 13B-REW Rotary</span></div>
+          <div class="t-badges"><span class="t-badge src">&#11088; SOURCED TO ORDER</span><span class="t-badge jdm">JDM 25yr &#10003;</span></div>
+        </a>
+        <div class="body"><div class="nm">Mazda RX-7 Type RS (FD3S)</div><div class="gr">1.3L Twin-Rotor Sequential Turbo &bull; 5MT &bull; Rotary icon</div><div class="tags"><span class="tg jdm">JDM Classic</span><span class="tg hl">25-Year Rule</span><span class="tg">FD3S</span></div></div>
+        <div class="price-row"><div class="pr" data-price="45000">From $45k <small>FOB &bull; POA</small></div></div>
+        <div class="actions">
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20looking%20for%20a%20*Mazda%20RX-7%20Type%20RS%20(FD3S)*%20sourced%20via%20Japanese%20auction%2Fdealer%20network.%20Budget%3A%20____.%20Year%3A%20____.%20Trim%3A%20____.%20Please%20advise." target="_blank" class="act act-site">&#128269; Source This Car</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%20want%20to%20discuss%20sourcing%20a%20*Mazda%20RX-7%20FD3S*.%20Please%20share%20current%20availability." target="_blank" class="act act-wa">&#128172; WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 12e. Nissan Silvia Spec-R S15 (Sourced to Order) -->
+      <div class="scard src-card" data-cat="classic" data-usd="30000">
+        <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20looking%20for%20a%20*Nissan%20Silvia%20Spec-R%20(S15)*%20sourced%20via%20Japanese%20auction%2Fdealer%20network.%20Budget%3A%20____.%20Year%3A%20____.%20Please%20advise." target="_blank" class="thumb t-classic">
+          <span class="t-icon">&#127939;</span>
+          <div class="t-label"><span class="t-make">Nissan</span><span class="t-model">Silvia Spec-R (S15)</span><span class="t-year">1999&ndash;2002 &bull; SR20DET</span></div>
+          <div class="t-badges"><span class="t-badge src">&#11088; SOURCED TO ORDER</span><span class="t-badge jdm">JDM 25yr &#10003;</span></div>
+        </a>
+        <div class="body"><div class="nm">Nissan Silvia Spec-R (S15)</div><div class="gr">2.0L Turbo SR20DET &bull; 6MT &bull; Drift-legend chassis</div><div class="tags"><span class="tg jdm">JDM Classic</span><span class="tg hl">25-Year Rule</span><span class="tg">S15</span></div></div>
+        <div class="price-row"><div class="pr" data-price="30000">From $30k <small>FOB &bull; POA</small></div></div>
+        <div class="actions">
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20looking%20for%20a%20*Nissan%20Silvia%20Spec-R%20(S15)*%20sourced%20via%20Japanese%20auction%2Fdealer%20network.%20Budget%3A%20____.%20Year%3A%20____.%20Please%20advise." target="_blank" class="act act-site">&#128269; Source This Car</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%20want%20to%20discuss%20sourcing%20a%20*Nissan%20Silvia%20S15%20Spec-R*.%20Please%20share%20current%20availability." target="_blank" class="act act-wa">&#128172; WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 12f. Honda Integra Type R DC2 (Sourced to Order) -->
+      <div class="scard src-card" data-cat="classic" data-usd="28000">
+        <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20looking%20for%20a%20*Honda%20Integra%20Type%20R%20(DC2)*%20sourced%20via%20Japanese%20auction%2Fdealer%20network.%20Budget%3A%20____.%20Year%3A%20____.%20Please%20advise." target="_blank" class="thumb t-classic">
+          <span class="t-icon">&#127941;</span>
+          <div class="t-label"><span class="t-make">Honda</span><span class="t-model">Integra Type R (DC2)</span><span class="t-year">1995&ndash;2001 &bull; B18C Spec-R</span></div>
+          <div class="t-badges"><span class="t-badge src">&#11088; SOURCED TO ORDER</span><span class="t-badge jdm">JDM 25yr &#10003;</span></div>
+        </a>
+        <div class="body"><div class="nm">Honda Integra Type R (DC2)</div><div class="gr">1.8L VTEC B18C &bull; 5MT &bull; Front-drive legend</div><div class="tags"><span class="tg jdm">JDM Classic</span><span class="tg hl">25-Year Rule</span><span class="tg">Type R</span></div></div>
+        <div class="price-row"><div class="pr" data-price="28000">From $28k <small>FOB &bull; POA</small></div></div>
+        <div class="actions">
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20looking%20for%20a%20*Honda%20Integra%20Type%20R%20(DC2)*%20sourced%20via%20Japanese%20auction%2Fdealer%20network.%20Budget%3A%20____.%20Year%3A%20____.%20Please%20advise." target="_blank" class="act act-site">&#128269; Source This Car</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%20want%20to%20discuss%20sourcing%20a%20*Honda%20Integra%20Type%20R%20DC2*.%20Please%20share%20current%20availability." target="_blank" class="act act-wa">&#128172; WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- 12g. Mitsubishi Lancer Evolution VI TME (Sourced to Order) -->
+      <div class="scard src-card" data-cat="classic" data-usd="55000">
+        <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20looking%20for%20a%20*Mitsubishi%20Lancer%20Evolution%20VI%20(CP9A)%20%E2%80%94%20Tommi%20M%C3%A4kinen%20Edition%20preferred*%20sourced%20via%20Japanese%20auction%2Fdealer%20network.%20Budget%3A%20____.%20Year%3A%20____.%20Please%20advise." target="_blank" class="thumb t-classic">
+          <span class="t-icon">&#127942;</span>
+          <div class="t-label"><span class="t-make">Mitsubishi</span><span class="t-model">Lancer Evo VI TME</span><span class="t-year">1999&ndash;2000 &bull; CP9A &bull; 4G63T</span></div>
+          <div class="t-badges"><span class="t-badge src">&#11088; SOURCED TO ORDER</span><span class="t-badge jdm">JDM 25yr &#10003;</span></div>
+        </a>
+        <div class="body"><div class="nm">Mitsubishi Lancer Evolution VI (TME)</div><div class="gr">2.0L Turbo 4G63T &bull; AWD &bull; 5MT &bull; Rally-bred icon</div><div class="tags"><span class="tg jdm">JDM Classic</span><span class="tg hl">25-Year Rule</span><span class="tg">Evo VI</span></div></div>
+        <div class="price-row"><div class="pr" data-price="55000">From $55k <small>FOB &bull; POA</small></div></div>
+        <div class="actions">
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%27m%20looking%20for%20a%20*Mitsubishi%20Lancer%20Evolution%20VI%20(CP9A)%20%E2%80%94%20Tommi%20M%C3%A4kinen%20Edition%20preferred*%20sourced%20via%20Japanese%20auction%2Fdealer%20network.%20Budget%3A%20____.%20Year%3A%20____.%20Please%20advise." target="_blank" class="act act-site">&#128269; Source This Car</a>
+          <a href="https://wa.me/818015037757?text=Hi%20Tom%2C%20I%20want%20to%20discuss%20sourcing%20a%20*Mitsubishi%20Lancer%20Evo%20VI%20TME*.%20Please%20share%20current%20availability." target="_blank" class="act act-wa">&#128172; WhatsApp</a>
+        </div>
+      </div>
+
       <!-- 13. Aqua S Style Black -->
       <div class="scard" data-cat="compact" data-usd="5414" data-photo="photos/stock/aqua-s-black.png">
         <a href="https://exsea.jp/auto_listing/toyota-aqua-nhp10-6755919/" target="_blank" class="thumb t-compact">
@@ -1806,9 +1923,9 @@
 
     </div>
 
-    <!-- Note: 14 featured cars shown. Full catalog of 1,200+ on exsea.jp -->
+    <!-- Note: 14 in-stock + 6 sourceable JDM icons. Full catalog of 1,200+ on exsea.jp -->
     <p style="text-align:center;color:#888;font-size:13px;margin-top:24px;margin-bottom:8px">
-      Showing <strong>14 featured vehicles</strong>. Browse our full stock of <strong>1,200+ cars</strong> on <a href="https://exsea.jp/listings/" target="_blank" style="color:var(--accent);border-bottom:1px solid var(--accent);font-weight:600">exsea.jp</a>.
+      Showing <strong>14 in-stock vehicles</strong> + <strong>6 sourceable JDM icons</strong>. Browse our full stock of <strong>1,200+ cars</strong> on <a href="https://exsea.jp/listings/" target="_blank" style="color:var(--accent);border-bottom:1px solid var(--accent);font-weight:600">exsea.jp</a>.
     </p>
 
     <div style="text-align:center;margin-top:28px">
@@ -2034,6 +2151,23 @@ document.querySelectorAll('a[data-tab]').forEach(a=>{
   });
 });
 
+// Deep-link support: #classic / #suv / #compact / #truck / #all pre-select tab
+// Also ?tab=classic works. Used by email campaigns (MailChimp etc.) to link into a specific tab.
+(function(){
+  const VALID = ['all','classic','suv','compact','truck'];
+  const hash  = (location.hash || '').replace('#','').toLowerCase();
+  const qs    = new URLSearchParams(location.search).get('tab');
+  const pick  = VALID.includes(hash) ? hash : (VALID.includes(qs) ? qs : null);
+  if(pick){
+    // Small defer so the DOM tabs/cards query works after currency init.
+    setTimeout(() => {
+      setTab(pick);
+      const stockSec = document.getElementById('stock');
+      if(stockSec) stockSec.scrollIntoView({behavior:'smooth', block:'start'});
+    }, 60);
+  }
+})();
+
 // Hero featured car: show SVG fallback if image missing
 (function(){
   const img = document.getElementById('heroFeaturedImg');
@@ -2123,7 +2257,7 @@ function submitRequest(e){
 </script>
 
 <!-- In-page editor (activates only with ?edit=ON in URL) -->
-<script src="editor.js?v=2" defer></script>
+<script src="editor.js?v=1" defer></script>
 
 </body>
 </html>
