@@ -1218,7 +1218,7 @@
             <div class="featured-title">2019 Toyota Harrier Premium</div>
             <div class="featured-sub">Pearl &bull; 90,468 km &bull; Grade 4.5B</div>
             <div class="featured-price">
-              <div class="price">$16,713 <small>FOB</small></div>
+              <div class="price pr" data-price="16713">$16,713 <small>FOB</small></div>
               <a href="#stock" style="font-size:10px;color:var(--ink-900);background:var(--gold-soft);padding:7px 14px;border-radius:999px;font-weight:700;letter-spacing:1.5px;text-decoration:none;text-transform:uppercase">View All &rarr;</a>
             </div>
           </div>
@@ -2187,7 +2187,8 @@ function setCurrency(c){
   document.querySelectorAll('.curr-btn').forEach(b=>b.classList.toggle('active',b.textContent.includes(c)));
   document.querySelectorAll('.pr[data-price]').forEach(el=>{
     const usd=parseFloat(el.dataset.price);const r=RATES[c];
-    el.innerHTML=`${r.sym}${Math.round(usd*r.rate).toLocaleString('en-US')} <small>FOB</small>`;
+    const note=(el.getAttribute('data-price-note')||'FOB').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    el.innerHTML=`${r.sym}${Math.round(usd*r.rate).toLocaleString('en-US')} <small>${note}</small>`;
   });
 }
 
@@ -2242,37 +2243,50 @@ document.querySelectorAll('a[data-tab]').forEach(a=>{
 })();
 
 // Stock card photos: apply background-image from data-photo, fallback to SVG gradient
+function exseaApplyStockThumb(card){
+  if(!card) return;
+  const photo = card.dataset.photo;
+  const thumb = card.querySelector('.thumb');
+  if(!thumb) return;
+  thumb.classList.remove('has-photo');
+  thumb.style.backgroundImage = '';
+  if(!photo) return;
+  const test = new Image();
+  test.onload = () => {
+    thumb.style.backgroundImage = `linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.75) 100%), url('${photo}')`;
+    thumb.style.backgroundSize = 'cover';
+    thumb.style.backgroundPosition = 'center';
+    thumb.classList.add('has-photo');
+  };
+  test.onerror = () => { thumb.classList.remove('has-photo'); };
+  test.src = photo;
+}
 (function(){
-  document.querySelectorAll('.scard[data-photo]').forEach(card => {
-    const photo = card.dataset.photo;
-    const thumb = card.querySelector('.thumb');
-    if(!thumb || !photo) return;
-    const test = new Image();
-    test.onload = () => {
-      thumb.style.backgroundImage = `linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.75) 100%), url('${photo}')`;
-      thumb.style.backgroundSize = 'cover';
-      thumb.style.backgroundPosition = 'center';
-      thumb.classList.add('has-photo');
-    };
-    test.src = photo;
-  });
+  document.querySelectorAll('.scard[data-photo]').forEach(exseaApplyStockThumb);
 })();
 
 // Staff photos: fallback to initials avatar if no photo
+function exseaApplyStaffThumb(card){
+  if(!card) return;
+  const photo = card.dataset.photo;
+  const imgEl = card.querySelector('.staff-photo');
+  const initEl = card.querySelector('.staff-initials');
+  if(!imgEl) return;
+  imgEl.style.backgroundImage = '';
+  imgEl.classList.remove('loaded');
+  if(initEl) initEl.style.display = '';
+  if(!photo) return;
+  const test = new Image();
+  test.onload = () => {
+    imgEl.style.backgroundImage = `url('${photo}')`;
+    imgEl.classList.add('loaded');
+    if(initEl) initEl.style.display = 'none';
+  };
+  test.onerror = () => { if(initEl) initEl.style.display = ''; };
+  test.src = photo;
+}
 (function(){
-  document.querySelectorAll('.staff-card').forEach(card => {
-    const photo = card.dataset.photo;
-    const imgEl = card.querySelector('.staff-photo');
-    const initEl = card.querySelector('.staff-initials');
-    if(!photo || !imgEl) return;
-    const test = new Image();
-    test.onload = () => {
-      imgEl.style.backgroundImage = `url('${photo}')`;
-      imgEl.classList.add('loaded');
-      if(initEl) initEl.style.display = 'none';
-    };
-    test.src = photo;
-  });
+  document.querySelectorAll('.staff-card').forEach(exseaApplyStaffThumb);
 })();
 
 // Counter animation for hero numbers
@@ -2318,7 +2332,7 @@ function submitRequest(e){
 </script>
 
 <!-- In-page editor (activates only with ?edit=ON in URL) -->
-<script src="editor.js?v=2" defer></script>
+<script src="editor.js?v=3" defer></script>
 
 </body>
 </html>
