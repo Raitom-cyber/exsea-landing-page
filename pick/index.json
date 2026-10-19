@@ -1,0 +1,68 @@
+{
+ "made": "2026-10-19 17:30",
+ "markets": [
+  {
+   "code": "NZ",
+   "market": "New Zealand",
+   "cur": "NZD",
+   "cars": 32,
+   "url": "https://raitom-cyber.github.io/exsea-landing-page/pick/NZ/"
+  },
+  {
+   "code": "UK",
+   "market": "United Kingdom",
+   "cur": "GBP",
+   "cars": 32,
+   "url": "https://raitom-cyber.github.io/exsea-landing-page/pick/UK/"
+  },
+  {
+   "code": "IE",
+   "market": "Ireland",
+   "cur": "EUR",
+   "cars": 32,
+   "url": "https://raitom-cyber.github.io/exsea-landing-page/pick/IE/"
+  },
+  {
+   "code": "TZ",
+   "market": "Tanzania",
+   "cur": "USD",
+   "cars": 32,
+   "url": "https://raitom-cyber.github.io/exsea-landing-page/pick/TZ/"
+  },
+  {
+   "code": "KE",
+   "market": "Kenya",
+   "cur": "USD",
+   "cars": 4,
+   "url": "https://raitom-cyber.github.io/exsea-landing-page/pick/KE/"
+  },
+  {
+   "code": "UG",
+   "market": "Uganda",
+   "cur": "USD",
+   "cars": 24,
+   "url": "https://raitom-cyber.github.io/exsea-landing-page/pick/UG/"
+  },
+  {
+   "code": "ZM",
+   "market": "Zambia",
+   "cur": "USD",
+   "cars": 32,
+   "url": "https://raitom-cyber.github.io/exsea-landing-page/pick/ZM/"
+  },
+  {
+   "code": "MZ",
+   "market": "Mozambique",
+   "cur": "USD",
+   "cars": 32,
+   "url": "https://raitom-cyber.github.io/exsea-landing-page/pick/MZ/"
+  },
+  {
+   "code": "BW",
+   "market": "Botswana",
+   "cur": "USD",
+   "cars": 32,
+   "url": "https://raitom-cyber.github.io/exsea-landing-page/pick/BW/"
+  }
+ ]
+}
