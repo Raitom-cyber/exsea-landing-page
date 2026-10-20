@@ -1,5 +1,5 @@
 {
- "made": "2026-10-20 15:27",
+ "made": "2026-10-20 15:42",
  "markets": [
   {
    "code": "AF",
@@ -18,14 +18,14 @@
   {
    "code": "UK",
    "market": "United Kingdom",
-   "cur": "GBP",
+   "cur": "USD",
    "cars": 32,
    "url": "https://raitom-cyber.github.io/exsea-landing-page/pick/UK/"
   },
   {
    "code": "IE",
    "market": "Ireland",
-   "cur": "EUR",
+   "cur": "USD",
    "cars": 32,
    "url": "https://raitom-cyber.github.io/exsea-landing-page/pick/IE/"
   },
