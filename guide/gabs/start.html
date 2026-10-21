@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Start with EXSEA on GABS — free account, flat fee, NZ support</title><meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--acc:#00a0e9;--acc2:#0b7fc0;--navy:#0f2f45;--mut:#6b7280;--line:#e3e9ef;--or:#ff7a00}
+*{box-sizing:border-box}body{margin:0;background:#f3f8fc;color:#212529;font-family:"Noto Sans JP","Helvetica Neue",Arial,sans-serif;line-height:1.55}
+.w{max-width:720px;margin:0 auto;padding:0 16px 60px}header{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.brand{font-weight:800;font-size:24px;color:var(--acc)}.brand small{display:block;font-size:10.5px;letter-spacing:.14em;color:var(--mut);font-weight:500}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 20px;margin:12px 0;box-shadow:0 2px 8px rgba(15,47,69,.06)}
+h1{font-size:clamp(22px,5.5vw,30px);margin:0 0 8px;color:var(--navy);line-height:1.2}.sub{color:var(--mut);font-size:14.5px;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}.chips span{background:#e7f6ee;color:#1f9d55;border-radius:99px;padding:5px 12px;font-size:12.5px;font-weight:700}
+.n{display:inline-block;width:34px;height:34px;line-height:34px;text-align:center;border-radius:50%;background:var(--acc);color:#fff;font-weight:800;font-size:16px;margin-right:8px}
+.step h2{font-size:18px;color:var(--navy);margin:0 0 8px}.step p{margin:0 0 10px;font-size:14px;color:#374151}
+.btn{display:inline-block;background:var(--or);color:#fff;text-decoration:none;font-weight:800;font-size:17px;padding:14px 22px;border-radius:12px;border:0;cursor:pointer;font-family:inherit}.btn.b{background:var(--acc)}.btn.g{background:#fff;color:var(--acc2);border:1px solid var(--acc);font-size:14px;padding:10px 16px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}input{font:inherit;font-size:16px;padding:12px;border:1px solid var(--line);border-radius:10px;flex:1 1 220px;min-width:0}
+.ok{display:none;background:#e7f6ee;border:1px solid #9fd8b8;color:#1f6b3f;border-radius:10px;padding:10px 12px;font-size:14px;margin-top:10px}
+table{width:100%;border-collapse:collapse;margin-top:8px}td{padding:8px 6px;border-bottom:1px solid var(--line);font-size:14px}td:last-child{text-align:right;font-weight:800;color:var(--acc2);white-space:nowrap}
+.cci{background:#e7f6ee;border:1px solid #9fd8b8;border-radius:12px;padding:14px 16px;margin-top:12px;font-size:14px;color:#1f4d33}.cci b{display:block;color:#0f2f45;font-size:15px;margin-bottom:4px}
+.steps img{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;margin:8px 0 14px}.steps h3{font-size:15px;color:var(--navy);margin:14px 0 4px}
+details summary{cursor:pointer;font-weight:800;color:var(--acc2);font-size:15px}
+footer{color:var(--mut);font-size:12px;padding:20px 0}
+</style></head><body><div class="w">
+<header><div class="brand">EXSEA<small>EXPERT SERVICE AGENT · OSAKA, JAPAN</small></div><div style="font-size:12px;color:var(--mut)" id="mk"></div></header>
+
+<div class="card"><h1>Two taps and you’re in.</h1><p class="sub">Free account on GABS (our stock + live auctions), one flat fee, and <span id="supp">a reply within one business day</span>. No deposit for customers we know.</p>
+<div class="chips"><span>✓ Free to register</span><span>✓ One flat fee</span><span>✓ No deposit</span><span id="chipcci" style="display:none">✓ NZ support by CCI</span></div></div>
+
+<div class="card step"><h2><span class="n">1</span>Create your free GABS account</h2><p>Name, country, email, phone, password. Two minutes. The page opens in a new tab — come back here when done.</p><a class="btn" href="https://cars.exsea.net/register" target="_blank" rel="noopener" id="reg">Create free account ▶</a></div>
+
+<div class="card step"><h2><span class="n">2</span>Done? Tap once — we open your auction access</h2><p>Enter the email you registered with. We switch on your live-auction view the same business day (no deposit for you).</p>
+<div class="row"><input id="em" type="email" placeholder="Email you used on GABS" autocomplete="email"><input id="nm" placeholder="Your name / company" style="flex:1 1 160px"></div>
+<div class="row" style="margin-top:8px"><button class="btn b" id="go">Open my access ▶</button><a class="btn g" id="wa" href="#" target="_blank" rel="noopener">or send on WhatsApp</a></div>
+<div class="ok" id="ok">✓ Received. We will confirm by email as soon as your access is on. Meanwhile you can browse the Stock List.</div></div>
+
+<div class="card" id="fee" style="display:none"><h2 style="font-size:18px;color:var(--navy);margin:0">Our flat fee for NZ — the whole rule</h2><div class="sub" style="margin-top:4px">FOB Japan = winning bid + one flat fee. No membership, no deposit, no percentages. Inland transport to the port at cost. Stock-list cars already carry an all-in FOB price.</div>
+<table><tr><td>Winning bid up to ¥1,000,000</td><td>+ ¥45,000</td></tr><tr><td>¥1,000,001 – ¥2,000,000</td><td>+ ¥65,000</td></tr><tr><td>¥2,000,001 – ¥3,000,000</td><td>+ ¥95,000</td></tr><tr><td>Over ¥3,000,000</td><td>+ ¥150,000</td></tr></table>
+<div class="cci"><b>Support on the ground in New Zealand</b>Our NZ partner CCI works with us on your side — someone in your time zone to call from the moment the car lands.</div></div>
+
+<div class="card" id="af" style="display:none"><h2 style="font-size:18px;color:var(--navy);margin:0">C&amp;F quotes to your port</h2><div class="sub" style="margin-top:4px">Pick a stock car or an auction car — we quote C&amp;F to Dar es Salaam, Mombasa, Durban or Maputo in writing before you commit. Pre-shipment inspection arranged for your country.</div></div>
+
+<div class="card"><div class="row"><a class="btn b" href="https://cars.exsea.net/stock-list" target="_blank" rel="noopener">Browse our Stock List ▶</a><a class="btn g" href="https://cars.exsea.net/auction" target="_blank" rel="noopener">Auction page</a></div></div>
+
+<div class="card steps"><details><summary>How the auction section works (6 screenshots)</summary>
+<h3>1 · Sign Up (top right)</h3><img loading="lazy" src="step1.png" alt=""><h3>2 · Register</h3><img loading="lazy" src="step2.png" alt=""><h3>3 · Log in — then we switch on your access</h3><img loading="lazy" src="step3.png" alt=""><h3>4 · Auction → Access Live Auction</h3><img loading="lazy" src="step4.png" alt=""><h3>5 · Search: date, maker, model, chassis, filters</h3><img loading="lazy" src="step5.png" alt=""><h3>6 · Open a car: auction sheet, grade, start price → Make a Bid (we bid for you in Japan)</h3><img loading="lazy" src="step6.png" alt=""></details></div>
+<footer>EXSEA Co., Ltd. — Osaka, Japan · WhatsApp +81 80 1503 7757 · <a href="https://cars.exsea.net/">cars.exsea.net</a></footer></div>
+<script>
+const Q=new URLSearchParams(location.search),M=(Q.get('mk')||Q.get('ref')||'').toUpperCase(),A=(Q.get('m')||Q.get('a')||'').replace(/[^A-Za-z0-9]/g,'').slice(0,4);
+const NZ=/NZ/.test(M),AF=/AF|TZ|KE|UG|ZM|MZ|BW/.test(M);
+if(NZ){document.getElementById('fee').style.display='';document.getElementById('chipcci').style.display='';document.getElementById('supp').textContent='support on the ground in New Zealand from our partner CCI';document.getElementById('mk').textContent='NEW ZEALAND';}
+if(AF){document.getElementById('af').style.display='';document.getElementById('mk').textContent='AFRICA · C&F';}
+const $=id=>document.getElementById(id);
+function msg(){return 'Hi EXSEA, I registered on GABS. Please open my auction access.\nEmail: '+$('em').value.trim()+'\nName: '+$('nm').value.trim()+(A?'\nAgent: '+A:'')+(M?'\nMarket: '+M:'');}
+function waUpd(){$('wa').href='https://wa.me/818015037757?text='+encodeURIComponent(msg());}
+['em','nm'].forEach(i=>$(i).addEventListener('input',waUpd));waUpd();
+$('go').onclick=async()=>{const em=$('em').value.trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){$('em').focus();$('em').style.borderColor='#e5484d';return;}
+ try{await fetch('https://go.exsea.net/_pick',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({market:M||'GABS',cur:'',agent:A,buyer_code:'',buyer:{name:$('nm').value.trim(),company:'',wa:'',addr:'',port:'',msg:'GABS access request · '+em},picks:[{ref:'GABS-ACCESS',car:'Open auction access for '+em,price:0,qty:1,offer:'',note:em}],list_made:'start',rate_used:0,basis:'',port:'',at:new Date().toISOString()})});}catch(e){}
+ $('ok').style.display='block';$('go').textContent='✓ Sent';$('go').disabled=true;
+ location.href='mailto:tom@exsea.jp?subject='+encodeURIComponent('GABS access request — '+em)+'&body='+encodeURIComponent(msg());};
+</script></body></html>
