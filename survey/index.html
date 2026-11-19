@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EXSEA — Importer Survey</title>
+<meta name="robots" content="noindex">
+<style>
+:root{--navy:#0f2f45;--blue:#0b7fc0;--orange:#ff7a00;--green:#25d366;--bg:#f4f7fa;--ink:#16232d;--mut:#5b6b77}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Arial,Helvetica,sans-serif}
+header{background:var(--navy);color:#fff;padding:18px 16px;border-bottom:5px solid var(--orange)}
+header h1{margin:0;font-size:22px}header p{margin:6px 0 0;color:#cfe3f0}
+main{max-width:640px;margin:0 auto;padding:16px}
+.card{background:#fff;border-radius:12px;padding:16px;margin:0 0 14px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+label{display:block;font-weight:700;margin:12px 0 6px}
+input[type=text],input[type=email],textarea,select{width:100%;padding:10px;border:1px solid #c8d3dc;border-radius:8px;font:inherit}
+textarea{min-height:90px}.opt{display:flex;gap:8px;align-items:flex-start;margin:6px 0;font-weight:400}
+.btn{display:block;width:100%;text-align:center;padding:14px;border-radius:10px;border:0;font:700 17px Arial;cursor:pointer;text-decoration:none;margin:10px 0}
+.b-or{background:var(--orange);color:#fff}.b-wa{background:var(--green);color:#fff}.b-bl{background:var(--blue);color:#fff}.b-nv{background:var(--navy);color:#fff}
+.small{font-size:13px;color:var(--mut)}#ok{display:none;background:#e8f8ee;border:2px solid var(--green)}
+.req:after{content:" *";color:#c0392b}
+</style>
+</head>
+<body>
+<header>
+  <h1>What is making it hard for you right now?</h1>
+  <p>2 minutes. Shipping, costs, finding cars, payment — tell us. We read every answer and reply within 1 business day.</p>
+</header>
+<main>
+  <div class="card" id="ok">
+    <b>Thank you — we received your answer.</b>
+    <p>Tom from EXSEA will reply within 1 business day. Want a faster answer? Message us on WhatsApp now.</p>
+    <a class="btn b-wa" id="wa2" href="#">Message Tom on WhatsApp</a>
+    <a class="btn b-bl" id="site2" href="#">See our stock &amp; register on the new website</a>
+  </div>
+
+  <form class="card" id="f">
+    <label class="req" for="country">Your country</label>
+    <input type="text" id="country" required>
+    <label class="req" for="company">Company name</label>
+    <input type="text" id="company" required>
+    <label for="name">Your name</label>
+    <input type="text" id="name">
+
+    <label>What is your biggest difficulty right now? (choose any)</label>
+    <div id="diff"></div>
+
+    <label for="more">Tell us more about your situation</label>
+    <textarea id="more" placeholder="e.g. our last 3 cars waited 6 weeks for a ship to ..."></textarea>
+
+    <label for="cars">Which cars or models do you need?</label>
+    <input type="text" id="cars" placeholder="e.g. Toyota Voxy 2019-2021, Honda Fit hybrid">
+
+    <label for="vol">How many cars per month do you import?</label>
+    <select id="vol"><option value="">—</option><option>1-2</option><option>3-5</option><option>6-10</option><option>11+</option></select>
+
+    <label for="bud">Budget per car (US$)</label>
+    <select id="bud"><option value="">—</option><option>under 5,000</option><option>5,000-10,000</option><option>10,000-20,000</option><option>over 20,000</option></select>
+
+    <label for="call">Would you like a free 30-minute online call?</label>
+    <select id="call"><option>Yes please</option><option>Maybe later</option><option>No</option></select>
+
+    <label class="req" for="contact">Best contact (WhatsApp number or email)</label>
+    <input type="text" id="contact" required>
+
+    <button class="btn b-or" type="submit" id="go">Send my answer</button>
+    <p class="small">We only use your answer to reply to you. EXSEA Co., Ltd., 8F Fujihara Bld., 1-18-15 Kyomachibori, Nishi-ku, Osaka, Japan.</p>
+  </form>
+
+  <div class="card">
+    <b>Prefer to talk now?</b>
+    <a class="btn b-wa" id="wa" href="#">WhatsApp Tom (+81 80 1503 7757)</a>
+    <a class="btn b-nv" id="talk" href="#">Book a free 30-min online call</a>
+    <a class="btn b-bl" id="site" href="#">See live stock &amp; register (new website)</a>
+  </div>
+</main>
+<script>
+const API = 'https://go.exsea.net/_pick';
+const WA = '818015037757';
+const TALK = 'https://go.exsea.net/TALK-T-survey';
+const NAMES = {NZ:'New Zealand',UK:'United Kingdom',ZW:'Zimbabwe',KE:'Kenya',TZ:'Tanzania',ZM:'Zambia',UG:'Uganda',MT:'Malta',LK:'Sri Lanka',TT:'Trinidad and Tobago',GY:'Guyana',JM:'Jamaica',BB:'Barbados',MZ:'Mozambique',BW:'Botswana'};
+const DIFF = ['Shipping space / delays','Freight cost','Finding the right cars at the right price','Import rules / age limits','Payment safety / trust','Slow replies from suppliers','Other'];
+const q = new URLSearchParams(location.search);
+const cc = (q.get('c') || '').toUpperCase().replace(/[^A-Z]/g, '').slice(0, 2);
+const src = (q.get('s') || 'web').replace(/[^a-z0-9]/gi, '').slice(0, 12);
+const $ = id => document.getElementById(id);
+if (NAMES[cc]) $('country').value = NAMES[cc];
+$('diff').innerHTML = DIFF.map((d, i) => '<label class="opt"><input type="checkbox" value="' + d + '" id="d' + i + '"> ' + d + '</label>').join('');
+const waText = 'Hello Tom, I am a car importer in ' + (NAMES[cc] || '[country]') + '. My difficulty now: ';
+const waUrl = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(waText);
+const siteUrl = 'https://cars.exsea.net/?ref=SURVEY_' + (cc || 'XX') + '&utm_source=' + src + '&utm_medium=survey';
+['wa', 'wa2'].forEach(i => $(i).href = waUrl);
+['site', 'site2'].forEach(i => $(i).href = siteUrl);
+$('talk').href = TALK;
+$('f').onsubmit = async e => {
+  e.preventDefault();
+  $('go').disabled = true; $('go').textContent = 'Sending...';
+  const diffs = DIFF.filter((d, i) => $('d' + i).checked);
+  const msg = ['MORE: ' + $('more').value, 'CARS: ' + $('cars').value, 'VOL: ' + $('vol').value, 'BUDGET: ' + $('bud').value, 'CALL: ' + $('call').value, 'COUNTRY: ' + $('country').value, 'SRC: ' + src].join(' | ');
+  const body = {market: cc || 'XX', cur: 'USD', agent: 'T', buyer_code: 'SURVEY',
+    buyer: {name: $('name').value, company: $('company').value, wa: $('contact').value, port: $('country').value, msg: msg},
+    picks: diffs.map(d => ({ref: 'Q-DIFF', car: d, price: 0, offer: '', note: ''})).concat([{ref: 'Q-CALL', car: $('call').value, price: 0, offer: '', note: ''}]),
+    list_made: 'survey-2026-11', rate_used: 0};
+  let ok = false;
+  try { const r = await fetch(API, {method: 'POST', headers: {'content-type': 'application/json'}, body: JSON.stringify(body)}); ok = r.ok; } catch (x) {}
+  if (ok) { $('f').style.display = 'none'; $('ok').style.display = 'block'; scrollTo(0, 0); }
+  else { $('go').disabled = false; $('go').textContent = 'Send my answer'; alert('Sorry, it did not send. Please message us on WhatsApp instead.'); location.href = waUrl; }
+};
+</script>
+</body>
+</html>
